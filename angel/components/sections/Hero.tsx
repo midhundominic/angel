@@ -118,7 +118,7 @@ export function Hero() {
             >
               <span className="h-px w-8 bg-[#b08d57]" aria-hidden="true" />
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8b6b3c]">
-                {siteConfig.name} · Payyampally
+                {siteConfig.name} · Chennalode  · Payyampally 
               </p>
             </motion.div>
 
