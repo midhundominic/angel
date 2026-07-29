@@ -63,7 +63,7 @@ export function Services() {
   return (
     <section
       id="services"
-      className="scroll-mt-24 overflow-hidden bg-[#f8f8f4] pb-24 pt-40 sm:pt-44 lg:pb-32 lg:pt-48"
+      className="scroll-mt-24 overflow-hidden bg-[#f8f8f4] py-24 lg:py-32"
     >
       <div className="section-shell relative">
         <div
@@ -85,7 +85,6 @@ export function Services() {
             eyebrow="Care at every mile"
             title="Respectful transport, coordinated around the clock."
             description="When timing matters and details carry weight, our role is simple: bring calm coordination, professional care, and clear communication to every transfer."
-            level="h1"
           />
           <div className="flex max-w-sm items-center gap-4 rounded-2xl border border-[#dce4e1] bg-white/70 p-4 shadow-[0_12px_40px_rgba(27,58,65,0.05)] backdrop-blur-sm">
             <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-[#193f47] text-white">

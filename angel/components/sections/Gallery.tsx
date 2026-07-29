@@ -18,6 +18,11 @@ const galleryLayout = [
   "md:col-span-5",
 ];
 
+const isWideTile = (index: number) => {
+  const span = galleryLayout[index % galleryLayout.length];
+  return span.includes("col-span-7");
+};
+
 export function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const reduceMotion = useReducedMotion();
@@ -89,8 +94,8 @@ export function Gallery() {
         <Reveal>
           <SectionHeading
             eyebrow="A closer look"
-            title="Our vehicle, prepared with care."
-            description="A closer look at the purpose-built vehicle used by Heaven Funeral Services for dignified, private, and carefully coordinated transport."
+            title="Our showroom and fleet, prepared with care."
+            description="A closer look at the Heaven Funeral Services showroom in Payyampally and the purpose-built vehicles we use for dignified, private, and carefully coordinated transport."
             align="center"
           />
         </Reveal>
@@ -99,7 +104,7 @@ export function Gallery() {
           {galleryImages.map((image, index) => (
             <Reveal
               key={image.src}
-              className={`min-h-[290px] ${galleryLayout[index]}`}
+              className={`min-h-[290px] ${galleryLayout[index % galleryLayout.length]}`}
               delay={(index % 3) * 0.06}
             >
               <motion.button
@@ -117,7 +122,7 @@ export function Gallery() {
                   alt={image.alt}
                   fill
                   sizes={
-                    index === 0 || index === 4 || index === 5
+                    isWideTile(index)
                       ? "(max-width: 768px) 92vw, 70vw"
                       : "(max-width: 768px) 92vw, 42vw"
                   }
@@ -144,8 +149,8 @@ export function Gallery() {
 
         <Reveal className="mx-auto mt-8 max-w-2xl text-center">
           <p className="text-xs leading-6 text-[#7a8889]">
-            Real service photography of the Heaven Funeral Services vehicle in
-            Payyampally and Chennalode.
+            Real photography of the Heaven Funeral Services showroom, fleet, and
+            facilities in Payyampally and Chennalode.
           </p>
         </Reveal>
       </div>
