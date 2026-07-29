@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
 
@@ -13,28 +14,18 @@ export function Brand({ inverse = false }: BrandProps) {
       aria-label={`${siteConfig.name}, home`}
     >
       <span
-        className={`grid size-11 place-items-center rounded-full border transition-transform duration-500 group-hover:rotate-6 ${
-          inverse
-            ? "border-white/25 bg-white/10 text-[#d4b678]"
-            : "border-[#b9955b]/35 bg-[#f4eee2] text-[#896a39]"
+        className={`relative grid size-11 shrink-0 place-items-center overflow-hidden rounded-full border bg-white transition-transform duration-500 group-hover:rotate-6 ${
+          inverse ? "border-white/25" : "border-[#b9955b]/35"
         }`}
         aria-hidden="true"
       >
-        <svg viewBox="0 0 32 32" className="size-6" fill="none">
-          <path
-            d="M10 8v16M22 8v16M10 16h12"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M5.5 11.5c3.2.2 5.5 1.3 7 3.4M26.5 11.5c-3.2.2-5.5 1.3-7 3.4"
-            stroke="currentColor"
-            strokeWidth="1.2"
-            strokeLinecap="round"
-          />
-        </svg>
+        <Image
+          src="/logo.jpeg"
+          alt=""
+          width={44}
+          height={44}
+          className="size-full scale-[1.18] object-cover"
+        />
       </span>
       <span className="leading-none">
         <span
