@@ -60,26 +60,29 @@ export function Contact() {
                 coordination.
               </p>
 
-              <motion.a
-                href={siteConfig.phoneHref}
-                whileHover={reduceMotion ? undefined : { x: 4 }}
-                className="mt-9 flex items-center justify-between gap-4 rounded-2xl border border-white/12 bg-white/[0.07] p-5 transition-colors hover:bg-white/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dcc58f]"
-              >
-                <span className="flex items-center gap-4">
-                  <span className="grid size-11 place-items-center rounded-xl bg-[#dcc58f] text-[#173b43]">
-                    <PhoneCall className="size-5" aria-hidden="true" />
-                  </span>
-                  <span>
-                    <span className="block text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-white/45">
-                      Call dispatch
+              <div className="mt-9 space-y-3">
+                <p className="text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-white/45">
+                  Call dispatch
+                </p>
+                {siteConfig.phoneNumbers.map((phone) => (
+                  <motion.a
+                    key={phone.href}
+                    href={phone.href}
+                    whileHover={reduceMotion ? undefined : { x: 4 }}
+                    className="flex items-center justify-between gap-4 rounded-2xl border border-white/12 bg-white/[0.07] p-4 transition-colors hover:bg-white/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#dcc58f]"
+                  >
+                    <span className="flex items-center gap-4">
+                      <span className="grid size-10 place-items-center rounded-xl bg-[#dcc58f] text-[#173b43]">
+                        <PhoneCall className="size-[18px]" aria-hidden="true" />
+                      </span>
+                      <span className="text-base font-semibold text-white">
+                        {phone.display}
+                      </span>
                     </span>
-                    <span className="mt-1 block text-base font-semibold text-white">
-                      {siteConfig.phoneDisplay}
-                    </span>
-                  </span>
-                </span>
-                <ArrowUpRight className="size-5 text-[#dcc58f]" aria-hidden="true" />
-              </motion.a>
+                    <ArrowUpRight className="size-5 text-[#dcc58f]" aria-hidden="true" />
+                  </motion.a>
+                ))}
+              </div>
 
               <ul className="mt-9 space-y-4 text-sm text-white/58">
                 <li className="flex items-start gap-3">
