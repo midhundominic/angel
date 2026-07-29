@@ -9,22 +9,9 @@ export function Footer() {
     <footer className="bg-[#14343b] text-white">
       <div className="section-shell grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.35fr_0.65fr_0.9fr] lg:gap-16 lg:py-20">
         <div>
-          <Brand inverse />
-          <p className="mt-6 max-w-md text-sm leading-7 text-white/58">
-            Calm, professional decedent transport coordination for care teams,
-            funeral professionals, and families—handled with dignity at every step.
-          </p>
-          <Link
-            href="#contact"
-            className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#dec38b] transition-colors hover:text-white"
-          >
-            Request transport
-            <ArrowUpRight className="size-4" aria-hidden="true" />
-          </Link>
-
-          <div className="mt-8 flex items-center gap-5 border-t border-white/10 pt-7">
+         <div className="mt-1 flex items-center gap-5  border-white/10 pt-1">
             <Image
-              src="/woads_logo.jpeg"
+              src="/venture-logo.jpg"
               alt="Woads Groups logo"
               width={72}
               height={72}
@@ -39,6 +26,19 @@ export function Footer() {
               </p>
             </div>
           </div>
+          <p className="mt-6 max-w-md text-sm leading-7 text-white/58">
+            Calm, professional decedent transport coordination for care teams,
+            funeral professionals, and families—handled with dignity at every step.
+          </p>
+          <Link
+            href="#contact"
+            className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#dec38b] transition-colors hover:text-white"
+          >
+            Request transport
+            <ArrowUpRight className="size-4" aria-hidden="true" />
+          </Link>
+
+         
         </div>
 
         <div>
