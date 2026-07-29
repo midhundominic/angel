@@ -35,7 +35,7 @@ export function Footer() {
                 A venture of
               </p>
               <p className="display-font mt-2.5 text-[1.7rem] tracking-[-0.01em] text-white">
-                Woads Groups
+                Woads Group
               </p>
             </div>
           </div>
@@ -63,15 +63,22 @@ export function Footer() {
             Dispatch
           </h2>
           <ul className="mt-5 space-y-4 text-sm text-white/62">
-            <li>
-              <a
-                href={siteConfig.phoneHref}
-                className="flex items-start gap-3 transition-colors hover:text-white"
-              >
-                <PhoneCall className="mt-0.5 size-4 shrink-0 text-[#dec38b]" aria-hidden="true" />
-                {siteConfig.phoneDisplay}
-              </a>
-            </li>
+            {siteConfig.phoneNumbers.map((phone, index) => (
+              <li key={phone.href}>
+                <a
+                  href={phone.href}
+                  className="flex items-start gap-3 transition-colors hover:text-white"
+                >
+                  <PhoneCall
+                    className={`mt-0.5 size-4 shrink-0 text-[#dec38b] ${
+                      index === 0 ? "" : "invisible"
+                    }`}
+                    aria-hidden="true"
+                  />
+                  {phone.display}
+                </a>
+              </li>
+            ))}
             <li className="flex items-start gap-3">
               <Clock3 className="mt-0.5 size-4 shrink-0 text-[#dec38b]" aria-hidden="true" />
               {siteConfig.availability}

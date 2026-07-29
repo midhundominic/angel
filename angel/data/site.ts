@@ -2,8 +2,13 @@ export const siteConfig = {
   name: "Heaven Funeral Services",
   shortName: "Heaven",
   descriptor: "Funeral Services",
-  phoneDisplay: "+91 80753 41710",
-  phoneHref: "tel:+918075341710",
+  phoneDisplay: "+91 95956 16843",
+  phoneHref: "tel:+919595616843",
+  phoneNumbers: [
+    { display: "+91 95956 16843", href: "tel:+919595616843" },
+    { display: "+91 80753 41710", href: "tel:+918075341710" },
+    { display: "+91 99465 98362", href: "tel:+919946598362" },
+  ],
   availability: "Available 24 hours, every day",
   serviceArea: "Payyampally, Chennalode & long-distance coordination",
 };
