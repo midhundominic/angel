@@ -59,4 +59,46 @@ export const galleryImages = [
     category: "Fleet profile",
     title: "Care across every mile",
   },
+  {
+    src: "/images/showroom/heaven-hearse-front.jpg",
+    alt: "Front view of the white Heaven Funeral Services hearse van beside the shop signboard",
+    category: "Hearse fleet",
+    title: "Ready at the doorstep",
+  },
+  {
+    src: "/images/showroom/heaven-showroom-display.jpg",
+    alt: "Heaven Funeral Services showroom display with coffins, a freezer unit, and floral arrangements",
+    category: "Showroom",
+    title: "Prepared with reverence",
+  },
+  {
+    src: "/images/showroom/heaven-showroom-interior.jpg",
+    alt: "Wide interior view of the Heaven Funeral Services showroom with coffin racks and display freezers",
+    category: "Showroom",
+    title: "Everything under one roof",
+  },
+  {
+    src: "/images/showroom/heaven-coffin-racks.jpg",
+    alt: "Racks of handcrafted wooden and decorated coffins inside the showroom",
+    category: "Coffin selection",
+    title: "A choice for every family",
+  },
+  {
+    src: "/images/showroom/heaven-showroom-entrance.jpg",
+    alt: "View from the entrance of the Heaven Funeral Services showroom in Payyampally",
+    category: "Our showroom",
+    title: "Open doors, open hearts",
+  },
+  {
+    src: "/images/showroom/heaven-freezer-unit.jpg",
+    alt: "Gold-finished mortuary freezer unit inside the Heaven Funeral Services showroom",
+    category: "Cold storage",
+    title: "Dignity, preserved",
+  },
+  {
+    src: "/images/showroom/heaven-storefront-freezer.jpg",
+    alt: "Branded Heaven Funeral Services mobile freezer unit at the showroom entrance",
+    category: "Mobile units",
+    title: "Care that travels home",
+  },
 ];
