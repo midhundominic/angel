@@ -1,4 +1,5 @@
 import { ArrowUpRight, Clock3, MapPin, PhoneCall } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { Brand } from "@/components/ui/Brand";
 import { navigation, siteConfig } from "@/data/site";
@@ -20,6 +21,24 @@ export function Footer() {
             Request transport
             <ArrowUpRight className="size-4" aria-hidden="true" />
           </Link>
+
+          <div className="mt-8 flex items-center gap-5 border-t border-white/10 pt-7">
+            <Image
+              src="/woads_logo.jpeg"
+              alt="Woads Groups logo"
+              width={72}
+              height={72}
+              className="size-[72px] shrink-0 rounded-full bg-white object-cover ring-2 ring-white/20"
+            />
+            <div className="leading-none">
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-[#dec38b]">
+                A venture of
+              </p>
+              <p className="display-font mt-2.5 text-[1.7rem] tracking-[-0.01em] text-white">
+                Woads Groups
+              </p>
+            </div>
+          </div>
         </div>
 
         <div>
