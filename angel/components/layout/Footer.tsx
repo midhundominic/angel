@@ -22,19 +22,19 @@ export function Footer() {
             <ArrowUpRight className="size-4" aria-hidden="true" />
           </Link>
 
-          <div className="mt-8 flex items-center gap-3 border-t border-white/10 pt-6">
+          <div className="mt-8 flex items-center gap-5 border-t border-white/10 pt-7">
             <Image
               src="/woads_logo.jpeg"
               alt="Woads Groups logo"
-              width={40}
-              height={40}
-              className="size-10 shrink-0 rounded-full bg-white object-cover"
+              width={72}
+              height={72}
+              className="size-[72px] shrink-0 rounded-full bg-white object-cover ring-2 ring-white/20"
             />
             <div className="leading-none">
-              <p className="text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-white/45">
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-[#dec38b]">
                 A venture of
               </p>
-              <p className="mt-1.5 text-sm font-semibold text-white">
+              <p className="display-font mt-2.5 text-[1.7rem] tracking-[-0.01em] text-white">
                 Woads Groups
               </p>
             </div>
