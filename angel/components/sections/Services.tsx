@@ -5,7 +5,7 @@ import {
   Building2,
   ClipboardCheck,
   Clock3,
-  Plane,
+  // Plane, // used by the commented-out "Airport Transfers" service below
   Route,
   Snowflake,
   type LucideIcon,
@@ -31,12 +31,14 @@ const services: Service[] = [
       "Careful coordination with hospitals, care facilities, funeral homes, and mortuary teams.",
     icon: Building2,
   },
-  {
-    title: "Airport Transfers",
-    description:
-      "Planned airport pickup and handoff with clear communication at each stage of the journey.",
-    icon: Plane,
-  },
+  // Airport Transfers — not offered at the moment. Restore this entry (and the
+  // `Plane` icon import above) when the service becomes available again.
+  // {
+  //   title: "Airport Transfers",
+  //   description:
+  //     "Planned airport pickup and handoff with clear communication at each stage of the journey.",
+  //   icon: Plane,
+  // },
   {
     title: "Long Distance Transport",
     description:
