@@ -1,8 +1,7 @@
-import { ArrowUpRight, Clock3, MapPin, PhoneCall } from "lucide-react";
+import { ArrowUpRight, Clock3, Mail, MapPin, PhoneCall } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Brand } from "@/components/ui/Brand";
-import { navigation, siteConfig } from "@/data/site";
+import { locations, navigation, siteConfig } from "@/data/site";
 
 export function Footer() {
   return (
@@ -27,8 +26,10 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-6 max-w-md text-sm leading-7 text-white/58">
-            Calm, professional decedent transport coordination for care teams,
-            funeral professionals, and families—handled with dignity at every step.
+            Heaven Funeral Services runs two shops in Wayanad — at Payyampally
+            and at Chennalode. Funerals arrangements, coffins, mortuary
+            freezer boxes, hearse van transport, and long-distance journeys
+            across Kerala, handled with dignity at every step.
           </p>
           <Link
             href="#contact"
@@ -84,10 +85,52 @@ export function Footer() {
               {siteConfig.availability}
             </li>
             <li className="flex items-start gap-3">
-              <MapPin className="mt-0.5 size-4 shrink-0 text-[#dec38b]" aria-hidden="true" />
-              {siteConfig.serviceArea}
+              <Mail className="mt-0.5 size-4 shrink-0 text-[#dec38b]" aria-hidden="true" />
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="break-all transition-colors hover:text-white"
+              >
+                {siteConfig.email}
+              </a>
             </li>
+            {/* Both shops, worded identically to the Contact section and to
+                each Google Business Profile. Matching NAP text across the site
+                is a direct local-ranking signal. */}
+            {locations.map((location) => (
+              <li key={location.id} className="flex items-start gap-3">
+                <MapPin
+                  className="mt-0.5 size-4 shrink-0 text-[#dec38b]"
+                  aria-hidden="true"
+                />
+                <address className="not-italic leading-6">
+                  <span className="block font-semibold text-white/80">
+                    {location.label}
+                  </span>
+                  {location.streetAddress}, {location.taluk}
+                  <br />
+                  {location.district}, {location.addressRegion}{" "}
+                  {location.postalCode}
+                </address>
+              </li>
+            ))}
           </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="section-shell py-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#dec38b]">
+            Areas we serve
+          </p>
+          <p className="mt-3 max-w-5xl text-xs leading-6 text-white/45">
+            Payyampally · Mananthavady · Thalappuzha · Korom · Vellamunda ·
+            Nalloornad · Panamaram · Kattikulam · Thirunelli · Thondernad ·
+            Edavaka · Boys Town · Dwaraka · Tholpetty · Chennalode · Kalpetta ·
+            Vythiri · Meppadi · Muttil · Pozhuthana · Padinjarathara ·
+            Kaniyambetta · Lakkidi · Sulthan Bathery · Meenangadi ·
+            Ambalavayal · Pulpally · and long-distance transport to Kannur,
+            Kozhikode, Karnataka &amp; Tamil Nadu
+          </p>
         </div>
       </div>
 

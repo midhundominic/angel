@@ -118,7 +118,7 @@ export function Hero() {
             >
               <span className="h-px w-8 bg-[#b08d57]" aria-hidden="true" />
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8b6b3c]">
-                {siteConfig.name} · Chennalode  · Payyampally 
+                {siteConfig.name} · Payyampally · Chennalode 
               </p>
             </motion.div>
 
@@ -140,7 +140,7 @@ export function Hero() {
                   animate={{ y: 0 }}
                   transition={{ duration: 0.9, delay: 0.2, ease: EASE }}
                 >
-                  arranged with{" "}
+                  in Wayanad, with{" "}
                   <span className="relative inline-block text-[#8b6b3c]">
                     quiet care.
                     <motion.span
@@ -161,10 +161,11 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.38, ease: EASE }}
               className="mt-7 max-w-xl text-[1.03rem] leading-8 text-[#647477]"
             >
-              From our Payyampally showroom to every doorstep we reach, Heaven
-              Funeral Services brings coffins, freezer units, hearse transport,
-              and calm coordination together—so your family carries only the
-              memories, not the logistics.
+              A dignified farewell, arranged from our two shops in Wayanad—at
+              Payyampally and at Chennalode. Coffins, processional crosses,
+              mortuary freezer boxes, hearse van transport, and long-distance
+              journeys across Kerala, answered 24 hours a day, so your family
+              carries only the memories, not the logistics.
             </motion.p>
 
             <motion.div
@@ -292,7 +293,7 @@ export function Hero() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#12333a]/78 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-32 right-6 text-right text-white">
                     <p className="text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-[#e0c991]">
-                      Payyampally showroom
+                      Payyampally shop
                     </p>
                     <p className="display-font mt-2 text-xl leading-snug">
                       Everything a farewell needs, under one roof.

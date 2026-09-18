@@ -2,12 +2,15 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import {
-  Building2,
+  Church,
   ClipboardCheck,
   Clock3,
+  Cross,
+  Flower2,
   // Plane, // used by the commented-out "Airport Transfers" service below
   Route,
   Snowflake,
+  Truck,
   type LucideIcon,
 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -18,18 +21,45 @@ type Service = {
   icon: LucideIcon;
 };
 
+// Titles are worded the way families in Wayanad actually search — "dead body
+// transport", "freezer box", "hearse van" — rather than in funeral-trade
+// language. See data/seo.ts for the reasoning behind the term choices.
 const services: Service[] = [
   {
-    title: "24/7 Decedent Transport",
+    title: "Funeral Arrangements",
     description:
-      "Round-the-clock dispatch coordination for timely, dignified transfers whenever care is needed.",
+      "Our main work. Coffins, processional crosses, candles, and flowers, with the parish priest and the church kept in step on timings from the first call onwards.",
+    icon: Cross,
+  },
+  {
+    title: "24/7 Dead Body Transport",
+    description:
+      "Call at any hour, any day. A vehicle is dispatched from Payyampally or Chennalode to hospitals, homes, and mortuaries across Wayanad, with no wait for office hours.",
     icon: Clock3,
   },
   {
-    title: "Hospital to Mortuary",
+    title: "Hearse Van Service",
     description:
-      "Careful coordination with hospitals, care facilities, funeral homes, and mortuary teams.",
-    icon: Building2,
+      "Our own enclosed hearse vans carry the departed from hospital or home to the church, temple, or burial ground — privately and without hurry.",
+    icon: Truck,
+  },
+  {
+    title: "Mortuary Freezer Box on Rent",
+    description:
+      "Mobile freezer boxes delivered to the house, parish hall, or hospital anywhere in Wayanad, set up by our team and collected once the rites are done.",
+    icon: Snowflake,
+  },
+  {
+    title: "Coffins, Crosses & Flowers",
+    description:
+      "A full range of coffins on display at both shops — plain handcrafted wood to decorated finishes — along with processional crosses, candles, and floral arrangements.",
+    icon: Flower2,
+  },
+  {
+    title: "Church & Parish Coordination",
+    description:
+      "We speak to the parish office and the cemetery directly, so the body arrives when the service is ready to begin and the family is not left chasing arrangements.",
+    icon: Church,
   },
   // Airport Transfers — not offered at the moment. Restore this entry (and the
   // `Plane` icon import above) when the service becomes available again.
@@ -42,19 +72,13 @@ const services: Service[] = [
   {
     title: "Long Distance Transport",
     description:
-      "Dependable regional and interstate coordination for longer journeys and scheduled transfers.",
+      "Journeys beyond the district — Kannur, Kozhikode, Bengaluru, Karnataka, Tamil Nadu — planned end to end, with the family kept updated along the route.",
     icon: Route,
-  },
-  {
-    title: "Refrigerated Vehicles",
-    description:
-      "Clean, temperature-controlled transport options prepared for secure and respectful care.",
-    icon: Snowflake,
   },
   {
     title: "Handling & Documentation",
     description:
-      "Professional handling and organized transfer documentation from pickup through arrival.",
+      "Respectful handling plus the transfer paperwork and permits a journey across district or state lines requires, arranged from pickup through arrival.",
     icon: ClipboardCheck,
   },
 ];
@@ -85,8 +109,8 @@ export function Services() {
         >
           <SectionHeading
             eyebrow="Care at every mile"
-            title="Respectful transport, coordinated around the clock."
-            description="When timing matters and details carry weight, our role is simple: bring calm coordination, professional care, and clear communication to every transfer."
+            title="Everything a funeral needs, from two shops in Wayanad."
+            description="Coffins, crosses, freezer boxes, hearse vans, and long-distance transport — kept ready at Payyampally and Chennalode, and dispatched across the district around the clock. One call, and the arrangements begin."
           />
           <div className="flex max-w-sm items-center gap-4 rounded-2xl border border-[#dce4e1] bg-white/70 p-4 shadow-[0_12px_40px_rgba(27,58,65,0.05)] backdrop-blur-sm">
             <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-[#193f47] text-white">

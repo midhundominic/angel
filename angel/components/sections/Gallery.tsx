@@ -94,8 +94,8 @@ export function Gallery() {
         <Reveal>
           <SectionHeading
             eyebrow="A closer look"
-            title="Our showroom and fleet, prepared with care."
-            description="A closer look at the Heaven Funeral Services showroom in Payyampally and the purpose-built vehicles we use for dignified, private, and carefully coordinated transport."
+            title="Our shops and fleet, prepared with care."
+            description="A closer look at the Heaven Funeral Services shops at Payyampally and Chennalode — the coffins and crosses we keep in stock, and the purpose-built vehicles we use for dignified, private, carefully coordinated transport across Wayanad."
             align="center"
           />
         </Reveal>
@@ -149,8 +149,8 @@ export function Gallery() {
 
         <Reveal className="mx-auto mt-8 max-w-2xl text-center">
           <p className="text-xs leading-6 text-[#7a8889]">
-            Real photography of the Heaven Funeral Services showroom, fleet, and
-            facilities in Payyampally and Chennalode.
+            Real photography of the Heaven Funeral Services shops, fleet, and
+            facilities at Payyampally and Chennalode in Wayanad.
           </p>
         </Reveal>
       </div>

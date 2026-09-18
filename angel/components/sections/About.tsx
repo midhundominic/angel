@@ -58,8 +58,8 @@ export function About() {
           <Reveal>
             <SectionHeading
               eyebrow="About Heaven"
-              title="A steady presence when certainty matters most."
-              description="When families and care teams need a dependable partner, our transport professionals bring discretion, compassion, and clear communication to every transfer."
+              title="A steady presence in Wayanad when certainty matters most."
+              description="Heaven Funeral Services is a Woads Group venture with two shops in Wayanad — at Payyampally in Mananthavady taluk and at Chennalode in Vythiri taluk, near Kalpetta. Families, parishes, and hospitals across the district call us because the same local team answers the phone, loads the vehicle, and stays until everything is settled."
             />
           </Reveal>
 
