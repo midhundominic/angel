@@ -223,7 +223,7 @@ export const navigation = [
   { label: "Services", href: "#services" },
   { label: "About Us", href: "#about" },
   { label: "Gallery", href: "#gallery" },
-  { label: "Service Areas", href: "#service-areas" },
+  // { label: "Service Areas", href: "#service-areas" },
   { label: "Contact", href: "#contact" },
 ];
 
