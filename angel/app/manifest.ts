@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Heaven Funeral Services — Wayanad",
     short_name: siteConfig.shortName,
     description:
-      "24-hour Christian funeral services in Wayanad: coffins, mortuary freezer box, hearse van, and long-distance transport from our Payyampally and Chennalode shops.",
+      "24-hour Funeral services in Wayanad: coffins for sale, mortuary freezer boxes on rent, hearse van, and long-distance transport from our Payyampally and Chennalode shops.",
     start_url: "/",
     display: "standalone",
     background_color: "#fbfaf7",

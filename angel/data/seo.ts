@@ -10,6 +10,12 @@
  *
  * Every term listed here should also appear in visible page copy somewhere —
  * the meta keywords tag alone carries no weight with Google.
+ *
+ * The two commercial lines are kept distinct throughout: coffins are *sold*,
+ * mortuary freezer boxes are *rented*. People search them differently ("coffin
+ * price", "buy coffin" vs "freezer box rent", "freezer box on rent per day"),
+ * and collapsing both into one vague "coffins and freezer boxes" phrase loses
+ * the rental queries entirely.
  */
 
 /** The handful of terms the site is built to win. Used in the homepage metadata. */
@@ -22,9 +28,13 @@ export const primaryKeywords = [
   "funeral services Kalpetta",
   "dead body freezer box Wayanad",
   "mortuary freezer box rent Wayanad",
+  "mortuary freezer box on rent Wayanad",
+  "freezer box rent Wayanad",
   "hearse van Wayanad",
   "dead body transport Wayanad",
   "coffin shop Wayanad",
+  "coffins for sale Wayanad",
+  "buy coffin Wayanad",
   "ambulance for dead body Wayanad",
   "long distance dead body transport Kerala",
   "24 hour funeral service Wayanad",
@@ -43,6 +53,7 @@ export const christianFuneralKeywords = [
   "Catholic funeral services Wayanad",
   "church funeral arrangements Wayanad",
   "Christian coffin shop Wayanad",
+  "Christian coffins for sale Wayanad",
   "coffin for Christian funeral Kerala",
   "processional cross and coffin Wayanad",
   "parish funeral coordination Wayanad",
@@ -55,6 +66,13 @@ export const secondaryKeywords = [
   "dead body carrier vehicle Kerala",
   "coffin box Mananthavady",
   "coffin price Wayanad",
+  "coffin shop near me Wayanad",
+  "wooden coffin for sale Kerala",
+  "decorated coffin for sale Wayanad",
+  "dead body freezer box rent Kerala",
+  "freezer box on rent per day Wayanad",
+  "freezer box rent Kalpetta",
+  "freezer box rent Mananthavady",
   "funeral arrangements Wayanad",
   "burial arrangements Wayanad",
   "dead body freezer box Kalpetta",

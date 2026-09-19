@@ -8,11 +8,22 @@ const WEBSITE_ID = `${siteConfig.url}/#website`;
 const allPlaces = serviceAreas.flatMap((area) => area.places);
 
 /**
+ * GoodRelations business functions. Schema.org has no `Rental` service type, so
+ * this is how an offer says "leased for a period" rather than "sold outright".
+ */
+const SELL = "http://purl.org/goodrelations/v1#Sell";
+const LEASE_OUT = "http://purl.org/goodrelations/v1#LeaseOut";
+
+/**
  * The services we want Google to associate with the business. Wording here is
  * deliberately plain and local — it mirrors the visible copy on the page, which
  * is what keeps the markup eligible rather than flagged as mismatched.
  */
-const serviceCatalog = [
+const serviceCatalog: {
+  name: string;
+  description: string;
+  businessFunction?: string;
+}[] = [
   {
     name: "Funeral Services in Wayanad",
     description:
@@ -29,14 +40,19 @@ const serviceCatalog = [
       "Company-owned enclosed hearse vans carrying the departed from hospital or home to the church, temple, or burial ground. Transport is not subcontracted.",
   },
   {
-    name: "Mortuary Freezer Box Rental",
+    name: "Mortuary Freezer Box on Rent",
     description:
-      "Mobile dead body freezer boxes delivered, installed, and collected at homes, parish halls, and hospitals across Wayanad.",
+      "Mobile dead body freezer boxes on rent — delivered, installed, and collected at homes, parish halls, and hospitals across Wayanad. Charged by the day, with no minimum hire.",
+    // Rented out, not sold. GoodRelations business functions are the vocabulary
+    // Google understands for that distinction; without them a freezer box and a
+    // coffin look like the same kind of offer.
+    businessFunction: LEASE_OUT,
   },
   {
-    name: "Coffin Sales",
+    name: "Coffins Sale",
     description:
-      "Handcrafted wooden and decorated coffins on display at both shops, with processional crosses, candles, and floral arrangements.",
+      "Coffins for sale at both shops — plain handcrafted wood through to decorated finishes, on display to see before deciding, with processional crosses, candles, and floral arrangements.",
+    businessFunction: SELL,
   },
   {
     name: "Long Distance Dead Body Transport",
@@ -130,9 +146,12 @@ function branchNode(location: (typeof locations)[number]) {
     knowsLanguage: ["ml", "en"],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Funeral services in Wayanad",
+      name: "Funeral services, coffins and freezer box rental in Wayanad",
       itemListElement: serviceCatalog.map((service) => ({
         "@type": "Offer",
+        ...(service.businessFunction
+          ? { businessFunction: service.businessFunction }
+          : {}),
         itemOffered: {
           "@type": "Service",
           name: service.name,
@@ -158,7 +177,7 @@ export function StructuredData() {
       name: siteConfig.name,
       legalName: siteConfig.legalName,
       description:
-        "Heaven Funeral Services runs two shops in Wayanad district, Kerala — at Payyampally in Mananthavady taluk and at Chennalode in Vythiri taluk near Kalpetta. Both provide Christian funeral arrangements, coffins, mortuary freezer box rental, hearse van transport, and long-distance dead body transport, 24 hours a day.",
+        "Heaven Funeral Services runs two shops in Wayanad district, Kerala — at Payyampally in Mananthavady taluk and at Chennalode in Vythiri taluk near Kalpetta. Both sell coffins, rent out mortuary freezer boxes, and provide Christian funeral arrangements, hearse van transport, and long-distance dead body transport, 24 hours a day.",
       url: siteConfig.url,
       logo: `${siteConfig.url}/logo.jpeg`,
       email: siteConfig.email,

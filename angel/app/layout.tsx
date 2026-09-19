@@ -19,7 +19,7 @@ const TITLE =
   "Heaven Funeral Services in Wayanad | Payyampally & Chennalode";
 
 const DESCRIPTION =
-  "Heaven Funeral Services from two shops in Wayanad — Payyampally and Chennalode. Coffins, mortuary freezer box, hearse van and long-distance dead body transport, 24 hours a day.";
+  "Heaven Funeral Services offers 24/7 support in Wayanad, including coffins, hearse van, and mortuary freezer rentals. We operate two shops in Payyampally and Chennalode, providing dignified funeral arrangements and long-distance transport.";
 
 export const metadata: Metadata = {
   // metadataBase is what turns every relative OG/canonical URL below into an
