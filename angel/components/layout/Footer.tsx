@@ -3,6 +3,29 @@ import Image from "next/image";
 import Link from "next/link";
 import { locations, navigation, siteConfig } from "@/data/site";
 
+/**
+ * lucide-react dropped its brand icons in v1, so the Instagram mark is inlined
+ * here — same 24px grid and stroke weight as the lucide icons beside it.
+ */
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+
 export function Footer() {
   return (
     <footer className="bg-[#14343b] text-white">
@@ -39,7 +62,25 @@ export function Footer() {
             <ArrowUpRight className="size-4" aria-hidden="true" />
           </Link>
 
-         
+          {/* A visible link to the profile is what makes the `sameAs` entry in
+              the structured data count — Google treats an unlinked profile
+              claim as unverified. Rendered only when the URL is filled in. */}
+          {siteConfig.social.instagram ? (
+            <div className="mt-8 flex items-center gap-3">
+              <a
+                href={siteConfig.social.instagram}
+                target="_blank"
+                rel="me noopener noreferrer"
+                aria-label="Heaven Funeral Services on Instagram"
+                className="flex size-10 items-center justify-center rounded-full border border-white/15 text-white/62 transition-colors hover:border-[#dec38b] hover:text-[#dec38b]"
+              >
+                <InstagramIcon className="size-[18px]" />
+              </a>
+              {/* <span className="text-sm text-white/45">
+                @heaven_funeral_services
+              </span> */}
+            </div>
+          ) : null}
         </div>
 
         <div>

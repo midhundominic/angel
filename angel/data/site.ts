@@ -19,10 +19,13 @@ export const siteConfig = {
   serviceArea: "Payyampally & Chennalode shops · Long-distance coordination",
 
   social: {
-    // TODO(owner): add real profile URLs — every one of these is a trust signal
-    // Google uses to connect the site to the business.
+    // TODO(owner): add the remaining profile URLs — every one of these is a
+    // trust signal Google uses to connect the site to the business.
     facebook: "",
-    instagram: "",
+    // Canonical profile URL only: the `?stkn=` share token that Instagram
+    // appends when you copy a link from the app is per-share and expires, and
+    // a `sameAs` that redirects or 404s is worse than no `sameAs` at all.
+    instagram: "https://www.instagram.com/heaven_funeral_services",
     youtube: "",
     googleMaps: "",
   },
