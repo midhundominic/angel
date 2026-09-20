@@ -8,11 +8,13 @@ import {
   Cross,
   Flower2,
   // Plane, // used by the commented-out "Airport Transfers" service below
+  ArrowUpRight,
   Route,
   Snowflake,
   Truck,
   type LucideIcon,
 } from "lucide-react";
+import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 type Service = {
@@ -173,6 +175,53 @@ export function Services() {
               </motion.article>
             );
           })}
+        </motion.div>
+
+        {/* Internal links to the two standalone pages. Both are real routes with
+            their own metadata and structured data, and this is the only place
+            on the homepage that points at them — so it earns its keep. */}
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+          whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          className="relative mt-12 grid gap-4 sm:grid-cols-2"
+        >
+          {[
+            {
+              href: "/coffin-boxes",
+              eyebrow: "Coffins & caskets",
+              title: "See the full coffin range",
+              copy: "Six ranges on the floor at both shops — plain hardwood, cross-panel with viewing glass, carved, and fully lined caskets.",
+            },
+            {
+              href: "/blogs",
+              eyebrow: "Guides & notes",
+              title: "Read before you need to ask",
+              copy: "What to do in the first hour, how freezer box hire works, choosing a coffin, and bringing someone home from another state.",
+            },
+          ].map((card) => (
+            <Link
+              key={card.href}
+              href={card.href}
+              className="group flex items-start justify-between gap-6 rounded-[1.4rem] border border-[#dfe6e3] bg-white p-7 shadow-[0_14px_45px_rgba(23,58,66,0.045)] transition-all duration-300 hover:-translate-y-1 hover:border-[#cdbb98] hover:shadow-[0_22px_55px_rgba(23,58,66,0.1)] sm:p-8"
+            >
+              <div>
+                <p className="text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-[#8b6b3c]">
+                  {card.eyebrow}
+                </p>
+                <h3 className="display-font mt-3 text-[1.5rem] leading-tight tracking-[-0.025em] text-[#19373e]">
+                  {card.title}
+                </h3>
+                <p className="mt-3 max-w-md text-[0.9rem] leading-7 text-[#69787a]">
+                  {card.copy}
+                </p>
+              </div>
+              <span className="grid size-11 shrink-0 place-items-center rounded-full border border-[#e0e6e3] text-[#8b6b3c] transition-all duration-300 group-hover:border-[#b08d57] group-hover:bg-[#193f47] group-hover:text-white">
+                <ArrowUpRight className="size-[18px]" aria-hidden="true" />
+              </span>
+            </Link>
+          ))}
         </motion.div>
       </div>
     </section>

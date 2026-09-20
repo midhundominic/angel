@@ -9,7 +9,7 @@ type BrandProps = {
 export function Brand({ inverse = false }: BrandProps) {
   return (
     <Link
-      href="#home"
+      href="/"
       className="group inline-flex items-center gap-3 rounded-full focus-visible:outline-none"
       aria-label={`${siteConfig.name}, home`}
     >

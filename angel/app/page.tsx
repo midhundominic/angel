@@ -1,3 +1,4 @@
+import { HomePageSchema } from "@/components/seo/StructuredData";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { About } from "@/components/sections/About";
@@ -13,6 +14,7 @@ import { TransportJourney } from "@/components/sections/TransportJourney";
 export default function Home() {
   return (
     <>
+      <HomePageSchema />
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>

@@ -221,98 +221,266 @@ export const faqs = [
   },
 ];
 
+/**
+ * Primary navigation.
+ *
+ * Hash targets are written as absolute paths (`/#services`) rather than bare
+ * fragments, because these same links render on /coffin-boxes and /blogs where
+ * a bare `#services` would only scroll the current page and find nothing.
+ */
 export const navigation = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "About Us", href: "#about" },
-  { label: "Gallery", href: "#gallery" },
-  // { label: "Service Areas", href: "#service-areas" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/#services" },
+  { label: "Coffin Boxes", href: "/coffin-boxes" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Blog", href: "/blogs" },
+  { label: "About Us", href: "/#about" },
+  // { label: "Service Areas", href: "/#service-areas" },
+  { label: "Contact", href: "/#contact" },
 ];
 
-export const galleryImages = [
+/** The routes that are real pages rather than in-page anchors. Used for the sitemap. */
+export const pageRoutes = ["/coffin-boxes", "/blogs"] as const;
+
+/**
+ * Gallery photography.
+ *
+ * `group` drives the filter chips in the Gallery section and nothing else — add
+ * a new value here and a new chip appears, in first-seen order. Every entry is
+ * a real photograph of our own shops, stock, and vehicles; `alt` text is written
+ * as a sentence describing what is actually in the frame, with the place name,
+ * because that is what makes these eligible for Google Images on "coffin shop
+ * Wayanad" and "freezer box Wayanad" searches.
+ */
+export type GalleryGroup =
+  | "Coffins"
+  | "Freezer boxes"
+  | "Hearse fleet"
+  | "Our shops"
+  | "At the parish";
+
+export type GalleryImage = {
+  src: string;
+  alt: string;
+  category: string;
+  title: string;
+  group: GalleryGroup;
+  /** Portrait-shot originals; the grid gives these a taller tile. */
+  portrait?: boolean;
+};
+
+export const galleryImages: GalleryImage[] = [
+  // ——— Coffins ———————————————————————————————————————————————————————
   {
-    src: "/images/gallery/web/heaven-vehicle-angle.jpg",
-    alt: "Heaven Funeral Services hearse van ready for dead body transport in Payyampally, Wayanad",
-    category: "Our vehicle",
-    title: "Prepared with dignity",
+    src: "/images/coffins/coffinbox_heavenfuneral.jpg",
+    alt: "Rows of polished wooden coffins with cross inlays inside the Heaven Funeral Services coffin shop in Wayanad",
+    category: "Coffin showroom",
+    title: "The full range, on the floor",
+    group: "Coffins",
   },
   {
-    src: "/images/gallery/web/heaven-vehicle-front.jpg",
-    alt: "Front view of the white Heaven Funeral Services hearse van serving Wayanad district",
-    category: "Front view",
-    title: "Ready for every call",
+    src: "/images/coffins/coffins_heaven_funeral_services.webp",
+    alt: "Rosewood coffin with an inlaid white cross and a glass viewing panel, sold at Payyampally and Chennalode in Wayanad",
+    category: "Cross-panel coffin",
+    title: "A face still visible",
+    group: "Coffins",
+    portrait: true,
   },
   {
-    src: "/images/gallery/web/heaven-vehicle-side.jpg",
-    alt: "Side view of the Heaven Funeral Services hearse showing its enclosed transport cabin",
-    category: "Purpose-built fleet",
-    title: "Designed for respectful care",
+    src: "/images/coffins/coffin_box.png",
+    alt: "Open walnut casket with a tufted cream satin interior and chrome swing-bar handles, available in Wayanad",
+    category: "Lined casket",
+    title: "Lined and finished by hand",
+    group: "Coffins",
   },
   {
-    src: "/images/gallery/web/heaven-vehicle-ready.jpg",
-    alt: "Three-quarter view of the clean white funeral transport vehicle after rainfall in Wayanad",
-    category: "Service readiness",
-    title: "Clean, calm, and prepared",
+    src: "/images/coffins/coffin_funeral_service.webp",
+    alt: "Carved and decorated wooden coffins on display stands at a coffin shop in Wayanad, Kerala",
+    category: "Carved range",
+    title: "Where the workshop hours go",
+    group: "Coffins",
   },
   {
-    src: "/images/gallery/web/heaven-vehicle-wide.jpg",
-    alt: "Wide view of the Heaven Funeral Services hearse van at Payyampally, Mananthavady",
-    category: "Local service",
-    title: "A familiar, dependable presence",
-  },
-  {
-    src: "/images/gallery/web/heaven-vehicle-rear.jpg",
-    alt: "Rear and side view of the enclosed Heaven Funeral Services dead body carrier vehicle",
-    category: "Secure transport",
-    title: "Private by design",
-  },
-  {
-    src: "/images/gallery/web/heaven-vehicle-profile.jpg",
-    alt: "Full side profile of the Heaven Funeral Services hearse van used for long-distance transport",
-    category: "Fleet profile",
-    title: "Care across every mile",
-  },
-  {
-    src: "/images/showroom/heaven-hearse-front.jpg",
-    alt: "Heaven Funeral Services hearse van beside the shop signboard in Payyampally, Wayanad",
-    category: "Hearse fleet",
-    title: "Ready at the doorstep",
-  },
-  {
-    src: "/images/showroom/heaven-showroom-display.jpg",
-    alt: "Coffins, mortuary freezer box, and floral arrangements at the Payyampally funeral showroom",
-    category: "Showroom",
-    title: "Prepared with reverence",
-  },
-  {
-    src: "/images/showroom/heaven-showroom-interior.jpg",
-    alt: "Interior of the Heaven Funeral Services coffin shop in Payyampally with racks and display freezers",
-    category: "Showroom",
-    title: "Everything under one roof",
+    src: "/images/coffins/coffinbox_heaven.jpg",
+    alt: "Plain polished hardwood coffin with a metal cross on the lid, from the Heaven Funeral Services coffin shop in Wayanad",
+    category: "Plain hardwood",
+    title: "Simple, and entirely enough",
+    group: "Coffins",
+    portrait: true,
   },
   {
     src: "/images/showroom/heaven-coffin-racks.jpg",
     alt: "Racks of handcrafted wooden and decorated coffins for sale in Wayanad",
     category: "Coffin selection",
     title: "A choice for every family",
+    group: "Coffins",
   },
   {
-    src: "/images/showroom/heaven-showroom-entrance.jpg",
-    alt: "Entrance of the Heaven Funeral Services showroom in Payyampally near Chennalode, Wayanad",
-    category: "Our showroom",
-    title: "Open doors, open hearts",
+    src: "/images/showroom/heaven-golden-cross.jpg",
+    alt: "Gold processional cross and white floral arrangement kept ready at the Payyampally funeral shop in Wayanad",
+    category: "Crosses & flowers",
+    title: "The cross that leads the way",
+    group: "Coffins",
+    portrait: true,
+  },
+  {
+    src: "/images/showroom/heaven-showroom-display.jpg",
+    alt: "Coffins, mortuary freezer box, and floral arrangements at the Payyampally funeral showroom",
+    category: "Showroom",
+    title: "Prepared with reverence",
+    group: "Coffins",
+  },
+
+  // ——— Freezer boxes —————————————————————————————————————————————————
+  {
+    src: "/images/freezer/heaven_freezer.jpeg",
+    alt: "Steel and gold-finished mortuary freezer boxes on rent, lined up at the Heaven Funeral Services showroom in Wayanad",
+    category: "Freezer box rental",
+    title: "Units ready to go out",
+    group: "Freezer boxes",
+  },
+  {
+    src: "/images/freezer/freezer.jpeg",
+    alt: "Mobile dead body freezer boxes with curved glass lids beside coffin racks at the Payyampally shop, Wayanad",
+    category: "Cold storage",
+    title: "Kept at home, not a mortuary",
+    group: "Freezer boxes",
   },
   {
     src: "/images/showroom/heaven-freezer-unit.jpg",
     alt: "Gold-finished mortuary freezer box available on rent in Wayanad",
     category: "Cold storage",
     title: "Dignity, preserved",
+    group: "Freezer boxes",
   },
   {
     src: "/images/showroom/heaven-storefront-freezer.jpg",
     alt: "Branded mobile dead body freezer box unit at the Payyampally showroom entrance",
     category: "Mobile units",
     title: "Care that travels home",
+    group: "Freezer boxes",
+    portrait: true,
+  },
+
+  // ——— Hearse fleet ——————————————————————————————————————————————————
+  {
+    src: "/images/gallery/web/heaven-vehicle-angle.jpg",
+    alt: "Heaven Funeral Services hearse van ready for dead body transport in Payyampally, Wayanad",
+    category: "Our vehicle",
+    title: "Prepared with dignity",
+    group: "Hearse fleet",
+  },
+  {
+    src: "/images/gallery/web/heaven-vehicle-front.jpg",
+    alt: "Front view of the white Heaven Funeral Services hearse van serving Wayanad district",
+    category: "Front view",
+    title: "Ready for every call",
+    group: "Hearse fleet",
+  },
+  {
+    src: "/images/gallery/web/heaven-vehicle-side.jpg",
+    alt: "Side view of the Heaven Funeral Services hearse showing its enclosed transport cabin",
+    category: "Purpose-built fleet",
+    title: "Designed for respectful care",
+    group: "Hearse fleet",
+  },
+  {
+    src: "/images/gallery/web/heaven-vehicle-ready.jpg",
+    alt: "Three-quarter view of the clean white funeral transport vehicle after rainfall in Wayanad",
+    category: "Service readiness",
+    title: "Clean, calm, and prepared",
+    group: "Hearse fleet",
+  },
+  {
+    src: "/images/gallery/web/heaven-vehicle-wide.jpg",
+    alt: "Wide view of the Heaven Funeral Services hearse van at Payyampally, Mananthavady",
+    category: "Local service",
+    title: "A familiar, dependable presence",
+    group: "Hearse fleet",
+  },
+  {
+    src: "/images/gallery/web/heaven-vehicle-rear.jpg",
+    alt: "Rear and side view of the enclosed Heaven Funeral Services dead body carrier vehicle",
+    category: "Secure transport",
+    title: "Private by design",
+    group: "Hearse fleet",
+  },
+  {
+    src: "/images/gallery/web/heaven-vehicle-profile.jpg",
+    alt: "Full side profile of the Heaven Funeral Services hearse van used for long-distance transport",
+    category: "Fleet profile",
+    title: "Care across every mile",
+    group: "Hearse fleet",
+  },
+  {
+    src: "/images/showroom/heaven-hearse-front.jpg",
+    alt: "Heaven Funeral Services hearse van beside the shop signboard in Payyampally, Wayanad",
+    category: "Hearse fleet",
+    title: "Ready at the doorstep",
+    group: "Hearse fleet",
+  },
+
+  // ——— Our shops —————————————————————————————————————————————————————
+  {
+    src: "/images/showroom/heaven-showroom-interior.jpg",
+    alt: "Interior of the Heaven Funeral Services coffin shop in Payyampally with racks and display freezers",
+    category: "Showroom",
+    title: "Everything under one roof",
+    group: "Our shops",
+  },
+  {
+    src: "/images/showroom/heaven-showroom-entrance.jpg",
+    alt: "Entrance of the Heaven Funeral Services showroom in Payyampally near Chennalode, Wayanad",
+    category: "Our showroom",
+    title: "Open doors, open hearts",
+    group: "Our shops",
+  },
+  {
+    src: "/images/showroom/heaven-storefront.jpg",
+    alt: "Coffins stacked on wall racks and a mortuary freezer box seen from the doorway of the Payyampally shop, Wayanad",
+    category: "Storefront",
+    title: "Stocked, and open at any hour",
+    group: "Our shops",
+    portrait: true,
+  },
+  {
+    src: "/images/showroom/heaven-hearse-exterior.jpg",
+    alt: "The Heaven Funeral Services shopfront in Wayanad with the hearse van parked outside under the signboard",
+    category: "Our shop",
+    title: "Where the calls are answered",
+    group: "Our shops",
+  },
+  {
+    src: "/images/blog/shop-with-van.jpeg",
+    alt: "Heaven Funeral Services signboard lit at night beside the hearse van at the Chennalode shop in Wayanad",
+    category: "After dark",
+    title: "The lights stay on",
+    group: "Our shops",
+    portrait: true,
+  },
+
+  // ——— At the parish —————————————————————————————————————————————————
+  {
+    src: "/images/blog/funeral-ceremony.jpeg",
+    alt: "Heaven Funeral Services hearse van at a parish church in Wayanad during a Christian funeral service",
+    category: "Church service",
+    title: "At the church door",
+    group: "At the parish",
+  },
+  {
+    src: "/images/blog/funeralservices_payyampally.jpeg",
+    alt: "Heaven Funeral Services hearse van waiting outside a church at Payyampally, Mananthavady, Wayanad",
+    category: "Payyampally",
+    title: "Waiting on the parish clock",
+    group: "At the parish",
+    portrait: true,
+  },
+  {
+    src: "/images/blog/funeralservices_ondayagady.jpeg",
+    alt: "White hearse van with ceremonial umbrellas outside a hill parish church in Wayanad, Kerala",
+    category: "Hill parishes",
+    title: "Up every road that asks",
+    group: "At the parish",
+    portrait: true,
   },
 ];

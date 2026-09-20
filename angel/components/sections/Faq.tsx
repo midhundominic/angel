@@ -1,17 +1,21 @@
+import { PageSchema, faqNode } from "@/components/seo/PageSchema";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { faqs, siteConfig } from "@/data/site";
 
 /**
  * Plain <details> elements — no JavaScript, so the answers are in the server-
- * rendered HTML and crawlable. These questions are mirrored as FAQPage
- * structured data in components/seo/StructuredData.tsx; Google requires the
- * marked-up text to be visible on the page, which is why both read from the
- * same source in data/site.ts.
+ * rendered HTML and crawlable.
+ *
+ * The FAQPage markup is emitted from here rather than from the sitewide graph.
+ * Google requires the marked-up questions to be visible on the page, and this
+ * section is currently commented out of app/page.tsx — emitting the schema from
+ * the layout meant claiming a FAQ that no page actually showed.
  */
 export function Faq() {
   return (
     <section id="faq" className="scroll-mt-24 bg-[#fbfaf7] py-24 lg:py-32">
+      <PageSchema nodes={[faqNode("/", [...faqs])]} />
       <div className="section-shell">
         <Reveal>
           <SectionHeading

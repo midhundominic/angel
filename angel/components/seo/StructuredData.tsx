@@ -1,4 +1,4 @@
-import { faqs, locations, serviceAreas, siteConfig } from "@/data/site";
+import { locations, serviceAreas, siteConfig } from "@/data/site";
 
 const ORGANISATION_ID = `${siteConfig.url}/#organization`;
 const WOADS_ID = `${siteConfig.url}/#woads`;
@@ -169,6 +169,16 @@ function branchNode(location: (typeof locations)[number]) {
   };
 }
 
+/**
+ * The sitewide entity graph — Organization, both FuneralHome branches, and the
+ * WebSite. These describe the business rather than the page, so they are correct
+ * on every route and are rendered once from the root layout.
+ *
+ * Page-level nodes live with their pages: the homepage's WebPage node is in
+ * `HomePageSchema` below, each inner page builds its own in components/seo/
+ * PageSchema.tsx, and the FAQPage node is emitted by the Faq section itself so
+ * the markup can only exist while the questions are actually visible.
+ */
 export function StructuredData() {
   const graph = [
     {
@@ -205,28 +215,6 @@ export function StructuredData() {
       inLanguage: "en-IN",
       publisher: { "@id": ORGANISATION_ID },
     },
-    {
-      "@type": "WebPage",
-      "@id": `${siteConfig.url}/#webpage`,
-      url: siteConfig.url,
-      name: "Christian Funeral Services in Wayanad | Payyampally & Chennalode",
-      isPartOf: { "@id": WEBSITE_ID },
-      about: { "@id": ORGANISATION_ID },
-      primaryImageOfPage: `${siteConfig.url}/images/showroom/heaven-storefront.jpg`,
-      inLanguage: "en-IN",
-    },
-    {
-      "@type": "FAQPage",
-      "@id": `${siteConfig.url}/#faq`,
-      mainEntity: faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      })),
-    },
   ];
 
   return (
@@ -235,6 +223,28 @@ export function StructuredData() {
       // Static, author-controlled data — no user input reaches this string.
       dangerouslySetInnerHTML={{
         __html: JSON.stringify({ "@context": "https://schema.org", "@graph": graph }),
+      }}
+    />
+  );
+}
+
+/** The homepage's own WebPage node. Rendered from app/page.tsx, nowhere else. */
+export function HomePageSchema() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": `${siteConfig.url}/#webpage`,
+          url: siteConfig.url,
+          name: "Christian Funeral Services in Wayanad | Payyampally & Chennalode",
+          isPartOf: { "@id": WEBSITE_ID },
+          about: { "@id": ORGANISATION_ID },
+          primaryImageOfPage: `${siteConfig.url}/images/showroom/heaven-storefront.jpg`,
+          inLanguage: "en-IN",
+        }),
       }}
     />
   );

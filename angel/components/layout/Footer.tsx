@@ -55,7 +55,7 @@ export function Footer() {
             across Kerala, handled with dignity at every step.
           </p>
           <Link
-            href="#contact"
+            href="/#contact"
             className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#dec38b] transition-colors hover:text-white"
           >
             Request transport

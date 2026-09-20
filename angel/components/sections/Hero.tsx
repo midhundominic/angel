@@ -175,7 +175,7 @@ export function Hero() {
               className="mt-9 flex flex-wrap items-center gap-4"
             >
               <Link
-                href="#contact"
+                href="/#contact"
                 className="group inline-flex min-h-12 items-center gap-2 rounded-full bg-[#193f47] px-7 py-3 text-sm font-semibold text-white shadow-[0_16px_34px_rgba(25,63,71,0.22)] transition-all hover:-translate-y-0.5 hover:bg-[#24515a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b08d57] focus-visible:ring-offset-2"
               >
                 Request Transport
