@@ -110,31 +110,33 @@ export default function CoffinBoxesPage() {
             breadcrumb: { "@id": `${siteConfig.url}${PATH}#breadcrumb` },
           },
           {
-            // An ItemList of Products, deliberately without `offers`. We do not
-            // publish coffin prices, and a Product node with a fabricated or
-            // omitted price is exactly what gets a site flagged in Search
-            // Console. This stays valid schema and still describes the range.
+            // A plain ItemList of the ranges — deliberately NOT typed `Product`.
+            //
+            // Google validates every Product node against its product-snippet
+            // rules, which require `offers`, `review`, or `aggregateRating`.
+            // We publish no coffin prices (the figure depends on size, wood and
+            // fittings, and is given on the phone), we have no reviews to cite,
+            // and inventing either would be a lie in structured data. So a
+            // Product node here can only ever be reported as invalid.
+            //
+            // A ListItem carrying name, url, image and description says exactly
+            // the same thing to a crawler, is valid, and keeps the report clean.
+            // If coffin prices are ever published, switch these back to Product
+            // with a real AggregateOffer and they become rich-result eligible.
             "@type": "ItemList",
             "@id": `${siteConfig.url}${PATH}#coffins`,
             name: "Coffin ranges available in Wayanad",
+            description:
+              "The coffin ranges kept in stock at the Payyampally and Chennalode shops.",
             numberOfItems: coffinRanges.length,
+            itemListOrder: "https://schema.org/ItemListUnordered",
             itemListElement: coffinRanges.map((range, index) => ({
               "@type": "ListItem",
               position: index + 1,
-              item: {
-                "@type": "Product",
-                "@id": `${siteConfig.url}${PATH}#${range.id}`,
-                name: range.name,
-                description: range.description,
-                image: `${siteConfig.url}${range.image}`,
-                category: "Coffins",
-                brand: { "@id": `${siteConfig.url}/#organization` },
-                additionalProperty: range.features.map((feature) => ({
-                  "@type": "PropertyValue",
-                  name: "Feature",
-                  value: feature,
-                })),
-              },
+              name: range.name,
+              description: range.description,
+              image: `${siteConfig.url}${range.image}`,
+              url: `${siteConfig.url}${PATH}#${range.id}`,
             })),
           },
           faqNode(PATH, coffinFaqs),
