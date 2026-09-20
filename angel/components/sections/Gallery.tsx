@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { galleryImages } from "@/data/site";
+import { galleryImages, type GalleryImage } from "@/data/site";
 
 /**
  * Filter chips are derived from `group` in data/site.ts in first-seen order, so
@@ -17,6 +17,44 @@ import { galleryImages } from "@/data/site";
  * a wide feature. `grid-flow-dense` backfills the gaps that leaves.
  */
 const GROUPS = ["All", ...Array.from(new Set(galleryImages.map((i) => i.group)))];
+
+/** How many vehicle shots open the "All" view before the mix begins. */
+const LEAD_GROUP = "Hearse fleet";
+const LEAD_COUNT = 4;
+
+/**
+ * "All" opens on the hearse fleet — the vans are what the business is
+ * recognised by on the road, and they make a better first impression than a
+ * wall of coffins. After the lead shots it deals one photograph from each group
+ * in turn, so the rest of the grid reads as a mix rather than five blocks.
+ *
+ * Computed here rather than by reordering data/site.ts, so the data file stays
+ * grouped and readable and a newly added photograph lands in the mix on its own.
+ */
+const ALL_ORDER: GalleryImage[] = (() => {
+  const lead = galleryImages
+    .filter((image) => image.group === LEAD_GROUP)
+    .slice(0, LEAD_COUNT);
+  const leading = new Set(lead);
+
+  const buckets = new Map<string, GalleryImage[]>();
+  for (const image of galleryImages) {
+    if (leading.has(image)) continue;
+    const bucket = buckets.get(image.group);
+    if (bucket) bucket.push(image);
+    else buckets.set(image.group, [image]);
+  }
+
+  const lists = [...buckets.values()];
+  const rest: GalleryImage[] = [];
+  for (let round = 0; lists.some((list) => round < list.length); round += 1) {
+    for (const list of lists) {
+      if (round < list.length) rest.push(list[round]);
+    }
+  }
+
+  return [...lead, ...rest];
+})();
 
 export function Gallery() {
   const [activeGroup, setActiveGroup] = useState("All");
@@ -29,7 +67,7 @@ export function Gallery() {
   const visible = useMemo(
     () =>
       activeGroup === "All"
-        ? galleryImages
+        ? ALL_ORDER
         : galleryImages.filter((image) => image.group === activeGroup),
     [activeGroup],
   );
