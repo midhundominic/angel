@@ -106,7 +106,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-IN" className={`${geist.variable} antialiased`}>
+    <html lang="en-IN" data-scroll-behavior="smooth" className={`${geist.variable} antialiased`}>
       <body>
         <StructuredData />
         <SmoothScroll />
