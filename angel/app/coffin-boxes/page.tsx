@@ -34,7 +34,7 @@ const PATH = "/coffin-boxes";
 const TITLE = "Coffin Boxes in Wayanad — Payyampally & Chennalode";
 
 const DESCRIPTION =
-  "Coffins for sale in Wayanad at our Payyampally and Chennalode shops — plain hardwood, cross-panel with viewing glass, carved, and lined caskets. Open 24 hours, same-day delivery.";
+  "Coffins for sale in Wayanad at our Payyampally and Chennalode shops — plain hardwood, cross-panel with viewing glass, lace-trimmed, and carved. Open 24 hours, same-day delivery.";
 
 export const metadata: Metadata = {
   title: "Coffin Boxes in Wayanad",
@@ -287,8 +287,8 @@ export default function CoffinBoxesPage() {
             <Reveal className="lg:sticky lg:top-28">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-[#dfe8e5] shadow-[0_32px_80px_rgba(24,55,62,0.14)]">
                 <Image
-                  src="/images/coffins/coffin_box.png"
-                  alt="Open walnut casket with a tufted cream satin interior and chrome handles, available in Wayanad"
+                  src="/images/coffins/coffin-shop-wall.jpg"
+                  alt="Wooden coffins in plain, lace-trimmed and decorated finishes on display racks at the Heaven Funeral Services shop in Payyampally, Wayanad"
                   fill
                   sizes="(max-width: 1024px) 90vw, 42vw"
                   className="object-cover"

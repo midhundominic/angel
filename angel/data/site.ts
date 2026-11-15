@@ -287,10 +287,10 @@ export const galleryImages: GalleryImage[] = [
     portrait: true,
   },
   {
-    src: "/images/coffins/coffin_box.png",
-    alt: "Open walnut casket with a tufted cream satin interior and chrome swing-bar handles, available in Wayanad",
-    category: "Lined casket",
-    title: "Lined and finished by hand",
+    src: "/images/coffins/lace-trimmed-coffin.jpg",
+    alt: "Wooden coffin box with silver lace trim on display at the Heaven Funeral Services coffin shop in Payyampally, Wayanad",
+    category: "Lace-trimmed coffin",
+    title: "Finished with a border",
     group: "Coffins",
   },
   {

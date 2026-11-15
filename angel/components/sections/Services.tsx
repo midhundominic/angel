@@ -192,7 +192,7 @@ export function Services() {
               href: "/coffin-boxes",
               eyebrow: "Coffins & caskets",
               title: "See the full coffin range",
-              copy: "Six ranges on the floor at both shops — plain hardwood, cross-panel with viewing glass, carved, and fully lined caskets.",
+              copy: "Six ranges on the floor at both shops — plain hardwood, lace-trimmed, cross-panel with viewing glass, and carved.",
             },
             {
               href: "/blogs",

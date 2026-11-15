@@ -342,8 +342,8 @@ export const blogPosts: BlogPost[] = [
       "coffin box Mananthavady",
     ],
     cover: {
-      src: "/images/coffins/coffin_box.png",
-      alt: "Open walnut casket with a tufted cream satin interior and chrome swing-bar handles, sold in Wayanad",
+      src: "/images/coffins/coffin-shop-display.jpg",
+      alt: "Plain, lace-trimmed and decorated wooden coffins on display racks inside the Heaven Funeral Services shop in Wayanad",
     },
     sections: [
       {
