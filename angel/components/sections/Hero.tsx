@@ -118,7 +118,7 @@ export function Hero() {
             >
               <span className="h-px w-8 bg-[#b08d57]" aria-hidden="true" />
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8b6b3c]">
-                {siteConfig.name} · Payyampally · Chennalode 
+                {siteConfig.name} · Payyampally · Kallody · Chennalode
               </p>
             </motion.div>
 
@@ -161,8 +161,8 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.38, ease: EASE }}
               className="mt-7 max-w-xl text-[1.03rem] leading-8 text-[#647477]"
             >
-              A dignified farewell, arranged from our two shops in Wayanad—at
-              Payyampally and at Chennalode. Coffins, processional crosses,
+              A dignified farewell, arranged from our three shops in Wayanad—at
+              Payyampally, Kallody and Chennalode. Coffins, processional crosses,
               mortuary freezer boxes, hearse van transport, and long-distance
               journeys across Kerala, answered 24 hours a day, so your family
               carries only the memories, not the logistics.

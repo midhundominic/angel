@@ -32,7 +32,7 @@ const serviceCatalog: {
   {
     name: "24/7 Dead Body Transport in Wayanad",
     description:
-      "Round-the-clock hearse van service from our Payyampally and Chennalode shops for transport from hospital, home, or mortuary anywhere in Wayanad district.",
+      "Round-the-clock hearse van service from our Payyampally, Kallody and Chennalode shops for transport from hospital, home, or mortuary anywhere in Wayanad district.",
   },
   {
     name: "Hearse Van Service in Wayanad",
@@ -51,7 +51,7 @@ const serviceCatalog: {
   {
     name: "Coffins Sale",
     description:
-      "Coffins for sale at both shops — plain handcrafted wood through to decorated finishes, on display to see before deciding, with processional crosses, candles, and floral arrangements.",
+      "Coffins for sale at all three shops — plain handcrafted wood through to decorated finishes, on display to see before deciding, with processional crosses, candles, and floral arrangements.",
     businessFunction: SELL,
   },
   {
@@ -170,7 +170,7 @@ function branchNode(location: (typeof locations)[number]) {
 }
 
 /**
- * The sitewide entity graph — Organization, both FuneralHome branches, and the
+ * The sitewide entity graph — Organization, the FuneralHome branches, and the
  * WebSite. These describe the business rather than the page, so they are correct
  * on every route and are rendered once from the root layout.
  *
@@ -187,7 +187,7 @@ export function StructuredData() {
       name: siteConfig.name,
       legalName: siteConfig.legalName,
       description:
-        "Heaven Funeral Services runs two shops in Wayanad district, Kerala — at Payyampally in Mananthavady taluk and at Chennalode in Vythiri taluk near Kalpetta. Both sell coffins, rent out mortuary freezer boxes, and provide Christian funeral arrangements, hearse van transport, and long-distance dead body transport, 24 hours a day.",
+        "Heaven Funeral Services runs three shops in Wayanad district, Kerala — at Payyampally and Kallody in Mananthavady taluk, and at Chennalode in Vythiri taluk near Kalpetta. All three sell coffins, rent out mortuary freezer boxes, and provide Christian funeral arrangements, hearse van transport, and long-distance dead body transport, 24 hours a day.",
       url: siteConfig.url,
       logo: `${siteConfig.url}/logo.jpeg`,
       email: siteConfig.email,

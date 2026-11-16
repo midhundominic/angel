@@ -164,7 +164,7 @@ For each one, at <https://business.google.com>:
 2. Address: the exact address on that shop's signboard. Verification is by
    postcard or video call — allow a couple of weeks per location.
 3. Hours: **Open 24 hours**, all seven days.
-4. Phone: `+91 95956 16843`. Website: `https://www.heavenfuneralservices.com`.
+4. Phone: `+91 94956 16843`. Website: `https://www.heavenfuneralservices.com`.
 5. Service areas: for Payyampally add Mananthavady, Panamaram, Kattikulam,
    Thirunelli, Vellamunda, Thalappuzha. For Chennalode add Kalpetta, Vythiri,
    Meppadi, Muttil, Sulthan Bathery, Meenangadi.

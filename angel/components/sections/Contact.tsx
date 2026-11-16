@@ -92,8 +92,8 @@ export function Contact() {
               </h3>
               <p className="mt-5 max-w-sm text-sm leading-7 text-white/62">
                 If your need is urgent, calling is the quickest way to begin. We
-                have two shops in Wayanad — at Payyampally and at Chennalode —
-                so one of them is close to you.
+                have three shops in Wayanad — at Payyampally, Kallody and
+                Chennalode — so one of them is close to you.
               </p>
 
               <div className="mt-9 space-y-3">
@@ -125,7 +125,7 @@ export function Contact() {
                   <Clock3 className="mt-0.5 size-4 shrink-0 text-[#dcc58f]" aria-hidden="true" />
                   {siteConfig.availability}
                 </li>
-                {/* Both shops spelled out, matching their Google Business
+                {/* Every shop spelled out, matching their Google Business
                     Profiles — consistent NAP text is a direct local-ranking
                     signal, and each address needs to appear on the page. */}
                 {locations.map((location) => (

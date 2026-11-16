@@ -143,7 +143,7 @@ export function Gallery() {
           <SectionHeading
             eyebrow="A closer look"
             title="Our coffins, freezer boxes, shops and fleet."
-            description="Real photography from the Heaven Funeral Services shops at Payyampally and Chennalode — the coffins and crosses we keep in stock, the mortuary freezer boxes that go out on rent, and the purpose-built vehicles we use for dignified transport across Wayanad."
+            description="Real photography from the Heaven Funeral Services shops at Payyampally, Kallody and Chennalode — the coffins and crosses we keep in stock, the mortuary freezer boxes that go out on rent, and the purpose-built vehicles we use for dignified transport across Wayanad."
             align="center"
           />
         </Reveal>
@@ -259,7 +259,7 @@ export function Gallery() {
             Showing {visible.length} of {galleryImages.length} photographs
             {activeGroup === "All" ? "" : ` in ${activeGroup.toLowerCase()}`}.
             Every image is our own — the shops, stock, and vehicles at
-            Payyampally and Chennalode in Wayanad.
+            Payyampally, Kallody and Chennalode in Wayanad.
           </p>
         </Reveal>
       </div>

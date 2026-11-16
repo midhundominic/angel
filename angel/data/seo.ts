@@ -24,6 +24,7 @@ export const primaryKeywords = [
   "Christian funeral services Wayanad",
   "funeral services Payyampally",
   "funeral services Chennalode",
+  "funeral services Kallody",
   "funeral services Mananthavady",
   "funeral services Kalpetta",
   "dead body freezer box Wayanad",

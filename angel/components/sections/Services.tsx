@@ -36,7 +36,7 @@ const services: Service[] = [
   {
     title: "24/7 Dead Body Transport",
     description:
-      "Call at any hour, any day. A vehicle is dispatched from Payyampally or Chennalode to hospitals, homes, and mortuaries across Wayanad, with no wait for office hours.",
+      "Call at any hour, any day. A vehicle is dispatched from Payyampally, Kallody or Chennalode to hospitals, homes, and mortuaries across Wayanad, with no wait for office hours.",
     icon: Clock3,
   },
   {
@@ -54,7 +54,7 @@ const services: Service[] = [
   {
     title: "Coffins, Crosses & Flowers",
     description:
-      "A full range of coffins on display at both shops — plain handcrafted wood to decorated finishes — along with processional crosses, candles, and floral arrangements.",
+      "A full range of coffins on display at all three shops — plain handcrafted wood to decorated finishes — along with processional crosses, candles, and floral arrangements.",
     icon: Flower2,
   },
   {
@@ -111,8 +111,8 @@ export function Services() {
         >
           <SectionHeading
             eyebrow="Care at every mile"
-            title="Everything a funeral needs, from two shops in Wayanad."
-            description="Coffins, crosses, freezer boxes, hearse vans, and long-distance transport — kept ready at Payyampally and Chennalode, and dispatched across the district around the clock. One call, and the arrangements begin."
+            title="Everything a funeral needs, from three shops in Wayanad."
+            description="Coffins, crosses, freezer boxes, hearse vans, and long-distance transport — kept ready at Payyampally, Kallody and Chennalode, and dispatched across the district around the clock. One call, and the arrangements begin."
           />
           <div className="flex max-w-sm items-center gap-4 rounded-2xl border border-[#dce4e1] bg-white/70 p-4 shadow-[0_12px_40px_rgba(27,58,65,0.05)] backdrop-blur-sm">
             <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-[#193f47] text-white">
@@ -192,7 +192,7 @@ export function Services() {
               href: "/coffin-boxes",
               eyebrow: "Coffins & caskets",
               title: "See the full coffin range",
-              copy: "Six ranges on the floor at both shops — plain hardwood, lace-trimmed, cross-panel with viewing glass, and carved.",
+              copy: "Six ranges on the floor at all three shops — plain hardwood, lace-trimmed, cross-panel with viewing glass, and carved.",
             },
             {
               href: "/blogs",

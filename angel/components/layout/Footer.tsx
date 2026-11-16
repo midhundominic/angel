@@ -49,8 +49,8 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-6 max-w-md text-sm leading-7 text-white/58">
-            Heaven Funeral Services runs two shops in Wayanad — at Payyampally
-            and at Chennalode. Funerals arrangements, coffins, mortuary
+            Heaven Funeral Services runs three shops in Wayanad — at
+            Payyampally, Kallody and Chennalode. Funerals arrangements, coffins, mortuary
             freezer boxes, hearse van transport, and long-distance journeys
             across Kerala, handled with dignity at every step.
           </p>
@@ -134,7 +134,7 @@ export function Footer() {
                 {siteConfig.email}
               </a>
             </li>
-            {/* Both shops, worded identically to the Contact section and to
+            {/* Every shop, worded identically to the Contact section and to
                 each Google Business Profile. Matching NAP text across the site
                 is a direct local-ranking signal. */}
             {locations.map((location) => (
@@ -164,7 +164,7 @@ export function Footer() {
             Areas we serve
           </p>
           <p className="mt-3 max-w-5xl text-xs leading-6 text-white/45">
-            Payyampally · Mananthavady · Thalappuzha · Korom · Vellamunda ·
+            Payyampally · Kallody · Mananthavady · Thalappuzha · Korom · Vellamunda ·
             Nalloornad · Panamaram · Kattikulam · Thirunelli · Thondernad ·
             Edavaka · Boys Town · Dwaraka · Tholpetty · Chennalode · Kalpetta ·
             Vythiri · Meppadi · Muttil · Pozhuthana · Padinjarathara ·

@@ -11,7 +11,7 @@ type PageHeroProps = {
   description: string;
   crumbs: Crumb[];
   image: { src: string; alt: string };
-  /** Small fact chips under the copy, e.g. "Two shops · Wayanad". */
+  /** Small fact chips under the copy, e.g. "Three shops · Wayanad". */
   meta?: string[];
   children?: React.ReactNode;
 };
@@ -129,7 +129,7 @@ export function PageHero({
           <div className="absolute -bottom-5 left-5 rounded-2xl border border-white/10 bg-[#0f2b31] px-5 py-4 shadow-[0_20px_45px_rgba(4,20,24,0.4)] sm:left-8">
             <p className="display-font text-2xl leading-none text-white">24/7</p>
             <p className="mt-2 text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-[#dec38b]">
-              Both shops, every day
+              Every shop, every day
             </p>
           </div>
         </div>

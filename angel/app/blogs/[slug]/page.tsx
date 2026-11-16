@@ -273,8 +273,8 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </p>
                 <p className="mt-4 text-sm leading-7 text-[#69787a]">
                   Coffins, mortuary freezer boxes, hearse vans, and long-distance
-                  transport — from our shops at Payyampally and Chennalode,
-                  24 hours a day.
+                  transport — from our shops at Payyampally, Kallody and
+                  Chennalode, 24 hours a day.
                 </p>
                 <div className="mt-6 space-y-2.5">
                   {siteConfig.phoneNumbers.map((phone, index) => (
@@ -318,7 +318,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                     Coffin boxes in Wayanad
                   </h2>
                   <p className="mt-3 text-sm leading-6 text-[#69787a]">
-                    Six ranges on the floor at both shops, with child and
+                    Six ranges on the floor at all three shops, with child and
                     oversize sizes and same-day delivery across the district.
                   </p>
                   <Link

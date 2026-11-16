@@ -7,16 +7,16 @@ export const siteConfig = {
   // Canonical origin. Keep in sync with NEXT_PUBLIC_SITE_URL in the environment.
   url: "https://www.heavenfuneralservices.com",
   email: "woads@heavenfuneralservices.com",
-  phoneDisplay: "+91 95956 16843",
-  phoneHref: "tel:+919595616843",
+  phoneDisplay: "+91 94956 16843",
+  phoneHref: "tel:+919495616843",
   phoneNumbers: [
-    { display: "+91 95956 16843", href: "tel:+919595616843" },
+    { display: "+91 94956 16843", href: "tel:+919495616843" },
     { display: "+91 80753 41710", href: "tel:+918075341710" },
     { display: "+91 99465 98362", href: "tel:+919946598362" },
   ],
-  whatsappHref: "https://wa.me/919595616843",
+  whatsappHref: "https://wa.me/919495616843",
   availability: "Available 24 hours, every day",
-  serviceArea: "Payyampally & Chennalode shops · Long-distance coordination",
+  serviceArea: "Payyampally, Kallody & Chennalode shops · Long-distance coordination",
 
   social: {
     // TODO(owner): add the remaining profile URLs — every one of these is a
@@ -59,9 +59,10 @@ export const directionsUrl = (location: Location) =>
   `https://www.google.com/maps/dir/?api=1&destination=${location.geo.latitude},${location.geo.longitude}`;
 
 /**
- * The two shops. They sit in different taluks — Payyampally in Mananthavady
- * (north Wayanad) and Chennalode in Vythiri (near Kalpetta, about 22km south) —
- * which between them cover the district from both ends.
+ * The three shops. Payyampally and Kallody are both in Mananthavady taluk —
+ * Payyampally east of Mananthavady town, Kallody west of it on the Kuttiady
+ * road — and Chennalode is in Vythiri taluk near Kalpetta, about 22km south.
+ * Between them they cover the district from both ends.
  *
  * Each one gets its own LocalBusiness entry in the structured data. NAP text
  * here must match each shop's Google Business Profile character for character;
@@ -92,6 +93,27 @@ export const locations: Location[] = [
     mapUrl: "",
   },
   {
+    id: "kallody",
+    name: "Heaven Funeral Services — Kallody",
+    label: "Kallody shop",
+    region: "West of Mananthavady",
+    description:
+      "Our newest shop, on the Kuttiady–Mananthavady road near St. Joseph's UP School, serving Kallody, Edavaka, and the villages west of Mananthavady town.",
+    // Matches the Kallody Google Business Profile address, in the same order.
+    streetAddress: "Kallody, Near St. Joseph's Upper Primary School",
+    locality: "Kallody",
+    taluk: "Mananthavady",
+    district: "Wayanad",
+    addressRegion: "Kerala",
+    postalCode: "670645",
+    country: "IN",
+    countryName: "India",
+    geo: { latitude: 11.766114, longitude: 75.962631 },
+    // TODO(owner): paste this shop's Google Business Profile link once
+    // verification is approved. Until then, directions use the coordinates.
+    mapUrl: "",
+  },
+  {
     id: "chennalode",
     name: "Heaven Funeral Services — Chennalode",
     label: "Chennalode shop",
@@ -117,17 +139,18 @@ export const locations: Location[] = [
 export const primaryLocation = locations[0];
 
 /**
- * Towns and villages we actually serve, grouped around the two shops. These
+ * Towns and villages we actually serve, grouped around the three shops. These
  * drive the Service Areas section and the `areaServed` structured data —
  * together they are how "funeral services near me" searches in Wayanad find us.
  */
 export const serviceAreas = [
   {
-    group: "From the Payyampally shop — north Wayanad",
+    group: "From the Payyampally & Kallody shops — north Wayanad",
     description:
       "Mananthavady taluk. A hearse or freezer box can usually be at the house within the hour.",
     places: [
       "Payyampally",
+      "Kallody",
       "Mananthavady",
       "Thalappuzha",
       "Korom",
@@ -210,7 +233,7 @@ export const faqs = [
   {
     question: "Where are your shops in Wayanad?",
     answer:
-      "We have two. One is at Payyampally in Mananthavady taluk, covering north Wayanad. The other is at Chennalode in Vythiri taluk, just north of Kalpetta, covering the centre and south of the district. Both keep coffins, mortuary freezer boxes, and a hearse van ready, so a call from almost anywhere in Wayanad can be answered within the hour, day or night.",
+      "We have three. Two are in Mananthavady taluk, covering north Wayanad: one at Payyampally, east of Mananthavady town, and one at Kallody, near St. Joseph's UP School on the Kuttiady road. The third is at Chennalode in Vythiri taluk, just north of Kalpetta, covering the centre and south of the district. All three keep coffins, mortuary freezer boxes, and a hearse van ready, so a call from almost anywhere in Wayanad can be answered within the hour, day or night.",
   },
   {
     question: "Do you arrange Christian funeral services?",
@@ -230,7 +253,7 @@ export const faqs = [
   {
     question: "Which areas of Wayanad do you cover?",
     answer:
-      "All three taluks. From Payyampally we cover Mananthavady, Panamaram, Kattikulam, Thirunelli, Vellamunda and the north. From Chennalode we cover Kalpetta, Vythiri, Meppadi, Muttil and the south, and on to Sulthan Bathery, Meenangadi, Ambalavayal and Pulpally in the east. We also cross regularly into the Kannur and Kozhikode border areas such as Iritty, Kelakam, Peravoor, and Thalassery.",
+      "All three taluks. From Payyampally and Kallody we cover Mananthavady, Edavaka, Panamaram, Kattikulam, Thirunelli, Vellamunda and the north. From Chennalode we cover Kalpetta, Vythiri, Meppadi, Muttil and the south, and on to Sulthan Bathery, Meenangadi, Ambalavayal and Pulpally in the east. We also cross regularly into the Kannur and Kozhikode border areas such as Iritty, Kelakam, Peravoor, and Thalassery.",
   },
   {
     question: "Can you arrange long-distance transport to another state?",
@@ -240,7 +263,7 @@ export const faqs = [
   {
     question: "Do you sell coffins, and can I see them before deciding?",
     answer:
-      "Both shops keep a full range of coffins on display — plain handcrafted wood through to decorated finishes — along with crosses, candles, floral arrangements, and the other items a farewell needs. You are welcome to come to whichever shop is nearer, at Payyampally or Chennalode, or we can send photographs over WhatsApp if travelling is difficult.",
+      "All three shops keep a full range of coffins on display — plain handcrafted wood through to decorated finishes — along with crosses, candles, floral arrangements, and the other items a farewell needs. You are welcome to come to whichever shop is nearer, at Payyampally, Kallody or Chennalode, or we can send photographs over WhatsApp if travelling is difficult.",
   },
   {
     question: "Are you available at night and on holidays?",
@@ -313,7 +336,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     src: "/images/coffins/coffins_heaven_funeral_services.webp",
-    alt: "Rosewood coffin with an inlaid white cross and a glass viewing panel, sold at Payyampally and Chennalode in Wayanad",
+    alt: "Rosewood coffin with an inlaid white cross and a glass viewing panel, sold at Payyampally, Kallody and Chennalode in Wayanad",
     category: "Cross-panel coffin",
     title: "A face still visible",
     group: "Coffins",

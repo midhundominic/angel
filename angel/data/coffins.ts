@@ -1,7 +1,7 @@
 /**
  * Coffin catalogue for /coffin-boxes.
  *
- * These are ranges, not fixed SKUs. Stock at Payyampally and Chennalode turns
+ * These are ranges, not fixed SKUs. Stock at Payyampally, Kallody and Chennalode turns
  * over constantly and finishes vary with what the workshop has on hand, so the
  * copy deliberately describes families of coffins rather than promising a
  * specific model on a specific day. No prices are published here either — the
@@ -55,7 +55,7 @@ export const coffinRanges: CoffinRange[] = [
       "Satin lining with matching pillow",
     ],
     image: "/images/coffins/coffins_heaven_funeral_services.webp",
-    alt: "Rosewood coffin with an inlaid white cross and a glass viewing panel, available at Payyampally and Chennalode in Wayanad",
+    alt: "Rosewood coffin with an inlaid white cross and a glass viewing panel, available at Payyampally, Kallody and Chennalode in Wayanad",
   },
   {
     id: "carved-decorated",
@@ -107,7 +107,7 @@ export const coffinRanges: CoffinRange[] = [
     name: "Child, Compact & Oversize",
     tagline: "Sizes outside the standard run",
     description:
-      "Standard coffins do not fit every person. We keep compact and child sizes at both shops, and we can have an oversize or extra-length coffin made and delivered quickly when the measurement calls for it. Tell us the measurement on the phone and we will confirm what is on the floor straight away.",
+      "Standard coffins do not fit every person. We keep compact and child sizes at all three shops, and we can have an oversize or extra-length coffin made and delivered quickly when the measurement calls for it. Tell us the measurement on the phone and we will confirm what is on the floor straight away.",
     features: [
       "Child and compact sizes held in stock",
       "Oversize and extra-length made to order",
@@ -158,7 +158,7 @@ export const choosingSteps = [
   {
     title: "Tell us the measurement",
     description:
-      "Height and build are all we need. Call from wherever you are — we will tell you which sizes are on the floor at Payyampally and at Chennalode before you travel anywhere.",
+      "Height and build are all we need. Call from wherever you are — we will tell you which sizes are on the floor at Payyampally, Kallody and Chennalode before you travel anywhere.",
   },
   {
     title: "Open or closed",
@@ -182,7 +182,7 @@ export const coffinFaqs = [
   {
     question: "Where can I buy a coffin in Wayanad?",
     answer:
-      "At either of our two shops. One is at Payyampally in Mananthavady taluk, covering north Wayanad; the other is at Chennalode in Vythiri taluk, just north of Kalpetta, covering the centre and south of the district. Both keep a full range of coffins on the floor, and both are open 24 hours. If travelling is difficult, call us and we will send photographs of what is in stock over WhatsApp.",
+      "At any of our three shops. Two are in Mananthavady taluk, covering north Wayanad: Payyampally, east of Mananthavady town, and Kallody, near St. Joseph's UP School on the Kuttiady road. The third is at Chennalode in Vythiri taluk, just north of Kalpetta, covering the centre and south of the district. All three keep a full range of coffins on the floor, and all three are open 24 hours. If travelling is difficult, call us and we will send photographs of what is in stock over WhatsApp.",
   },
   {
     question: "How much does a coffin cost in Wayanad?",
@@ -192,7 +192,7 @@ export const coffinFaqs = [
   {
     question: "Can I get a coffin delivered the same day?",
     answer:
-      "Yes. Within Wayanad a coffin usually reaches the house or the parish hall within the hour, wherever the size you need is on the floor. Both shops are stocked and staffed around the clock, including Sundays and festival days, so a call at 2am is answered the same way a call at 2pm is.",
+      "Yes. Within Wayanad a coffin usually reaches the house or the parish hall within the hour, wherever the size you need is on the floor. All three shops are stocked and staffed around the clock, including Sundays and festival days, so a call at 2am is answered the same way a call at 2pm is.",
   },
   {
     question: "Do you supply coffins for Christian funerals?",
@@ -202,12 +202,12 @@ export const coffinFaqs = [
   {
     question: "Can I see the coffins before deciding?",
     answer:
-      "Please do. Both shops keep the range on display, and you are welcome at whichever is nearer at any hour. Most families send one person to look while the rest stay at the house — that is entirely normal, and we will not hurry anyone through it.",
+      "Please do. All three shops keep the range on display, and you are welcome at whichever is nearer at any hour. Most families send one person to look while the rest stay at the house — that is entirely normal, and we will not hurry anyone through it.",
   },
   {
     question: "Do you keep child and oversize coffins?",
     answer:
-      "Compact and child sizes are held in stock at both shops. Oversize and extra-length coffins we have made and delivered quickly — tell us the measurement on the phone and we will confirm what can be done and by when, straight away.",
+      "Compact and child sizes are held in stock at all three shops. Oversize and extra-length coffins we have made and delivered quickly — tell us the measurement on the phone and we will confirm what can be done and by when, straight away.",
   },
   {
     question: "Can I rent a freezer box along with the coffin?",

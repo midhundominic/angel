@@ -19,7 +19,7 @@ const TITLE =
   "Heaven Funeral Services in Wayanad | Payyampally & Chennalode";
 
 const DESCRIPTION =
-  "Heaven Funeral Services offers 24/7 support in Wayanad, including coffins, hearse van, and mortuary freezer rentals. We operate two shops in Payyampally and Chennalode, providing dignified funeral arrangements and long-distance transport.";
+  "Heaven Funeral Services offers 24/7 support in Wayanad, including coffins, hearse van, and mortuary freezer rentals. We operate three shops in Payyampally, Kallody and Chennalode, providing dignified funeral arrangements and long-distance transport.";
 
 export const metadata: Metadata = {
   // metadataBase is what turns every relative OG/canonical URL below into an
@@ -87,9 +87,9 @@ export const metadata: Metadata = {
   other: {
     // Legacy geo tags. Minor signals today, but harmless and still parsed by
     // some local directories and aggregators. They take a single point, so they
-    // carry the Payyampally shop; both shops are in the structured data.
+    // carry the Payyampally shop; every shop is in the structured data.
     "geo.region": "IN-KL",
-    "geo.placename": `Payyampally and Chennalode, ${primaryLocation.district}, ${primaryLocation.addressRegion}`,
+    "geo.placename": `Payyampally, Kallody and Chennalode, ${primaryLocation.district}, ${primaryLocation.addressRegion}`,
     "geo.position": `${primaryLocation.geo.latitude};${primaryLocation.geo.longitude}`,
     ICBM: `${primaryLocation.geo.latitude}, ${primaryLocation.geo.longitude}`,
   },

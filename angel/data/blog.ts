@@ -110,7 +110,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "5. Let the arrangements come to the house",
         paragraphs: [
-          "The coffin, the processional cross, the candles, and the floral work all come out from the shop together. One person from the family can come to Payyampally or Chennalode to choose the coffin if they wish, and most do — but if nobody can be spared, we will send photographs of what is on the floor over WhatsApp and bring what is chosen.",
+          "The coffin, the processional cross, the candles, and the floral work all come out from the shop together. One person from the family can come to Payyampally, Kallody or Chennalode to choose the coffin if they wish, and most do — but if nobody can be spared, we will send photographs of what is on the floor over WhatsApp and bring what is chosen.",
           "The hearse van then carries the coffin from the house to the church, and on to the burial ground afterwards. The same team that took your call does the journey. Nothing is passed to a contractor.",
         ],
       },
@@ -194,7 +194,7 @@ export const blogPosts: BlogPost[] = [
     title: "Hearse van service to Wayanad's hill parishes",
     metaTitle: "Hearse Van Service for Wayanad Churches",
     description:
-      "Enclosed hearse vans from Payyampally and Chennalode, reaching hill parishes and narrow estate roads across Wayanad. Company-owned vehicles, nothing subcontracted.",
+      "Enclosed hearse vans from Payyampally, Kallody and Chennalode, reaching hill parishes and narrow estate roads across Wayanad. Company-owned vehicles, nothing subcontracted.",
     excerpt:
       "A hearse that cannot get up the road is no hearse at all. On the vehicles we run, why they are the size they are, and how the route is planned before the day.",
     category: "Our work",
@@ -243,7 +243,7 @@ export const blogPosts: BlogPost[] = [
           "The ceremonial umbrellas, the floral work along the vehicle, the cross at the front — these are arranged for the family who want them and left off for the family who do not. Neither is more correct. We ask, and we do what is asked.",
         ],
         callout:
-          "Two shops, two dispatch points: Payyampally for north Wayanad, Chennalode for Kalpetta, Vythiri, Meppadi and the south. A vehicle is usually with you within the hour.",
+          "Three shops, three dispatch points: Payyampally and Kallody for north Wayanad, Chennalode for Kalpetta, Vythiri, Meppadi and the south. A vehicle is usually with you within the hour.",
       },
       {
         heading: "Beyond the district",
@@ -293,7 +293,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Getting one to the house",
         list: [
           "Call any of our dispatch numbers and give the location — a landmark and a panchayat is enough.",
-          "We confirm availability on that call. Both shops hold units.",
+          "We confirm availability on that call. Every shop holds units.",
           "The unit is delivered and carried in by our team, not left at the gate.",
           "It is levelled, connected, brought down to temperature, and checked before we leave.",
           "We collect it once the rites are done, at whatever hour that turns out to be.",
@@ -355,7 +355,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "1. The measurement",
         paragraphs: [
-          "Height and build. That is the whole of it, and it is the one thing that genuinely constrains the choice, so it comes first. Tell us on the phone and we will tell you which sizes are on the floor at Payyampally and at Chennalode before anyone travels.",
+          "Height and build. That is the whole of it, and it is the one thing that genuinely constrains the choice, so it comes first. Tell us on the phone and we will tell you which sizes are on the floor at Payyampally, Kallody and Chennalode before anyone travels.",
           "Compact and child sizes are held in stock. Oversize and extra-length can be made and delivered quickly — but only if we know early, so say it on the first call.",
         ],
       },
@@ -466,7 +466,7 @@ export const blogPosts: BlogPost[] = [
     title: "Why the lights stay on: 24-hour funeral service in Wayanad",
     metaTitle: "24 Hour Funeral Service in Wayanad",
     description:
-      "Both Heaven Funeral Services shops in Wayanad stay staffed 24 hours a day, every day. Why that matters at 2am, and what actually happens when you call at that hour.",
+      "All three Heaven Funeral Services shops in Wayanad stay staffed 24 hours a day, every day. Why that matters at 2am, and what actually happens when you call at that hour.",
     excerpt:
       "Most deaths we are called to happen between midnight and dawn. That is not an accident of scheduling — it is simply when people die.",
     category: "Our work",
@@ -501,16 +501,16 @@ export const blogPosts: BlogPost[] = [
         list: [
           "A person answers — not a recording and not a callback request.",
           "We confirm what is available and what can move, on that call.",
-          "A vehicle is dispatched from whichever shop is nearer, Payyampally or Chennalode.",
+          "A vehicle is dispatched from whichever shop is nearest: Payyampally, Kallody or Chennalode.",
           "A freezer box is loaded at the same time, if relatives are travelling.",
           "You are given a plain figure before anything is arranged.",
         ],
       },
       {
-        heading: "Two shops, so the hour is not spent on the road",
+        heading: "Three shops, so the hour is not spent on the road",
         paragraphs: [
-          "One shop covering the whole of Wayanad would mean an hour's drive to the far end of the district in the middle of the night. Payyampally covers Mananthavady taluk and the north; Chennalode, just north of Kalpetta, covers Vythiri taluk, the centre and the south, and reaches on towards Sulthan Bathery.",
-          "Between them, a vehicle is usually at the house within the hour from almost anywhere in the district — which is the whole reason for keeping two of everything.",
+          "One shop covering the whole of Wayanad would mean an hour's drive to the far end of the district in the middle of the night. Payyampally and Kallody cover Mananthavady taluk and the north, on either side of Mananthavady town; Chennalode, just north of Kalpetta, covers Vythiri taluk, the centre and the south, and reaches on towards Sulthan Bathery.",
+          "Between them, a vehicle is usually at the house within the hour from almost anywhere in the district — which is the whole reason for keeping more than one of everything.",
         ],
         callout:
           "Sundays, festival days, Christmas, Easter, the night of a local election — the lines are answered exactly the same way. There is no wrong hour to ring.",

@@ -34,7 +34,7 @@ const PATH = "/coffin-boxes";
 const TITLE = "Coffin Boxes in Wayanad — Payyampally & Chennalode";
 
 const DESCRIPTION =
-  "Coffins for sale in Wayanad at our Payyampally and Chennalode shops — plain hardwood, cross-panel with viewing glass, lace-trimmed, and carved. Open 24 hours, same-day delivery.";
+  "Coffins for sale in Wayanad at our Payyampally, Kallody and Chennalode shops — plain hardwood, cross-panel with viewing glass, lace-trimmed, and carved. Open 24 hours, same-day delivery.";
 
 export const metadata: Metadata = {
   title: "Coffin Boxes in Wayanad",
@@ -127,7 +127,7 @@ export default function CoffinBoxesPage() {
             "@id": `${siteConfig.url}${PATH}#coffins`,
             name: "Coffin ranges available in Wayanad",
             description:
-              "The coffin ranges kept in stock at the Payyampally and Chennalode shops.",
+              "The coffin ranges kept in stock at the Payyampally, Kallody and Chennalode shops.",
             numberOfItems: coffinRanges.length,
             itemListOrder: "https://schema.org/ItemListUnordered",
             itemListElement: coffinRanges.map((range, index) => ({
@@ -151,8 +151,8 @@ export default function CoffinBoxesPage() {
       <main id="main-content">
         <PageHero
           eyebrow="Coffins & caskets"
-          title="Coffin boxes in Wayanad, kept ready at both shops."
-          description="Plain hardwood through to hand-carved and fully lined — a full range on the floor at Payyampally and at Chennalode, day and night. Come and see them, or tell us the measurement on the phone and we will bring what you choose to the house."
+          title="Coffin boxes in Wayanad, kept ready at all three shops."
+          description="Plain hardwood through to hand-carved and fully lined — a full range on the floor at Payyampally, Kallody and Chennalode, day and night. Come and see them, or tell us the measurement on the phone and we will bring what you choose to the house."
           crumbs={crumbs.map((crumb, index) => ({
             label: crumb.label,
             href: index < crumbs.length - 1 ? crumb.path : undefined,
@@ -441,12 +441,12 @@ export default function CoffinBoxesPage() {
             <Reveal>
               <SectionHeading
                 eyebrow="Come and see them"
-                title="Two shops, both open at any hour."
+                title="Three shops, all open at any hour."
                 align="center"
               />
             </Reveal>
 
-            <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2">
+            <div className="mx-auto mt-12 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {locations.map((location, index) => (
                 <Reveal key={location.id} delay={index * 0.08}>
                   <div className="flex h-full flex-col rounded-[1.4rem] border border-[#d9e3df] bg-white p-7 shadow-[0_14px_45px_rgba(23,58,66,0.05)]">

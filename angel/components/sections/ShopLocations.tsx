@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { directionsUrl, locations, mapEmbedUrl, siteConfig } from "@/data/site";
 
 /**
- * Both shops on a live Google Map, each with a one-tap "Get directions" link.
+ * Every shop on a live Google Map, each with a one-tap "Get directions" link.
  * The address text matches the structured data and the Business Profiles —
  * keep all three identical (see data/site.ts).
  *
@@ -17,12 +17,12 @@ export function ShopLocations() {
         <Reveal>
           <SectionHeading
             eyebrow="Find our shops"
-            title="Two shops in Wayanad, open day and night."
+            title="Three shops in Wayanad, open day and night."
             description="Come to whichever is nearer to see the coffins and arrangements in person, or tap for directions straight to the door."
           />
         </Reveal>
 
-        <div className="mt-14 grid gap-8 lg:mt-20 lg:grid-cols-2">
+        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:mt-20 xl:grid-cols-3">
           {locations.map((location, index) => (
             <Reveal key={location.id} delay={index * 0.08}>
               <article className="flex h-full flex-col overflow-hidden rounded-[1.8rem] border border-[#dce4e1] bg-white shadow-[0_28px_80px_rgba(24,55,62,0.08)]">
