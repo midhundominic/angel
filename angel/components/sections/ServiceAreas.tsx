@@ -24,7 +24,7 @@ export function ServiceAreas() {
           <SectionHeading
             eyebrow="Where we travel"
             title="Three shops, covering Wayanad from both ends."
-            description="Two shops in Mananthavady taluk, at Payyampally and Kallody, and a third at Chennalode in Vythiri taluk just north of Kalpetta, about 22km south. Between them they reach every panchayat in Wayanad district. For long-distance journeys we cross into Kannur, Kozhikode, Karnataka, and Tamil Nadu."
+            description="Two shops in Mananthavady taluk, at Payyampally and Kallody, and a third at Chennalode in Vythiri taluk, north-west of Kalpetta, towards Padinjarathara. Between them they reach every panchayat in Wayanad district. For long-distance journeys we cross into Kannur, Kozhikode, Karnataka, and Tamil Nadu."
           />
         </Reveal>
 

@@ -509,7 +509,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Three shops, so the hour is not spent on the road",
         paragraphs: [
-          "One shop covering the whole of Wayanad would mean an hour's drive to the far end of the district in the middle of the night. Payyampally and Kallody cover Mananthavady taluk and the north, on either side of Mananthavady town; Chennalode, just north of Kalpetta, covers Vythiri taluk, the centre and the south, and reaches on towards Sulthan Bathery.",
+          "One shop covering the whole of Wayanad would mean an hour's drive to the far end of the district in the middle of the night. Payyampally and Kallody cover Mananthavady taluk and the north, on either side of Mananthavady town; Chennalode, north-west of Kalpetta, towards Padinjarathara, covers Vythiri taluk, the centre and the south, and reaches on towards Sulthan Bathery.",
           "Between them, a vehicle is usually at the house within the hour from almost anywhere in the district — which is the whole reason for keeping more than one of everything.",
         ],
         callout:

@@ -502,7 +502,7 @@ export default function CoffinBoxesPage() {
                   WhatsApp
                 </a>{" "}
                 and we will send photographs of what is on the floor right now,
-                at either shop.
+                at any of the three shops.
               </p>
             </Reveal>
           </div>

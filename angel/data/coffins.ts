@@ -182,7 +182,7 @@ export const coffinFaqs = [
   {
     question: "Where can I buy a coffin in Wayanad?",
     answer:
-      "At any of our three shops. Two are in Mananthavady taluk, covering north Wayanad: Payyampally, east of Mananthavady town, and Kallody, near St. Joseph's UP School on the Kuttiady road. The third is at Chennalode in Vythiri taluk, just north of Kalpetta, covering the centre and south of the district. All three keep a full range of coffins on the floor, and all three are open 24 hours. If travelling is difficult, call us and we will send photographs of what is in stock over WhatsApp.",
+      "At any of our three shops. Two are in Mananthavady taluk, covering north Wayanad: Payyampally, east of Mananthavady town, and Kallody, near St. Joseph's UP School on the Kuttiady road. The third is at Chennalode in Vythiri taluk, north-west of Kalpetta, towards Padinjarathara, covering the centre and south of the district. All three keep a full range of coffins on the floor, and all three are open 24 hours. If travelling is difficult, call us and we will send photographs of what is in stock over WhatsApp.",
   },
   {
     question: "How much does a coffin cost in Wayanad?",

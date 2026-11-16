@@ -61,7 +61,8 @@ export const directionsUrl = (location: Location) =>
 /**
  * The three shops. Payyampally and Kallody are both in Mananthavady taluk —
  * Payyampally east of Mananthavady town, Kallody west of it on the Kuttiady
- * road — and Chennalode is in Vythiri taluk near Kalpetta, about 22km south.
+ * road — and Chennalode is in Vythiri taluk north-west of Kalpetta, about 18km south
+ * of Payyampally.
  * Between them they cover the district from both ends.
  *
  * Each one gets its own LocalBusiness entry in the structured data. NAP text
@@ -119,16 +120,16 @@ export const locations: Location[] = [
     label: "Chennalode shop",
     region: "Central & south Wayanad",
     description:
-      "Our Vythiri-taluk shop just north of Kalpetta, serving Kalpetta, Vythiri, Meppadi, Muttil, and on towards Sulthan Bathery.",
-    streetAddress: "Chennalode",
-    locality: "Chennalode",
+      "Our Vythiri-taluk shop north-west of Kalpetta, towards Padinjarathara, serving Kalpetta, Vythiri, Meppadi, Muttil, and on towards Sulthan Bathery.",
+    streetAddress: "Chennalode, Padinjarathara",
+    locality: "Padinjarathara",
     taluk: "Vythiri",
     district: "Wayanad",
     addressRegion: "Kerala",
     postalCode: "673121",
     country: "IN",
     countryName: "India",
-    geo: { latitude: 11.63045, longitude: 76.0867 },
+    geo: { latitude: 11.654529, longitude: 75.995638 },
     // TODO(owner): paste this shop's Google Business Profile link (Maps → the
     // shop → Share → Copy link). Until then, directions use the coordinates.
     mapUrl: "",
@@ -172,7 +173,7 @@ export const serviceAreas = [
   {
     group: "From the Chennalode shop — central & south Wayanad",
     description:
-      "Vythiri taluk, just north of Kalpetta, covering the district's southern half.",
+      "Vythiri taluk, north-west of Kalpetta, towards Padinjarathara, covering the district's southern half.",
     places: [
       "Chennalode",
       "Kalpetta",
@@ -233,7 +234,7 @@ export const faqs = [
   {
     question: "Where are your shops in Wayanad?",
     answer:
-      "We have three. Two are in Mananthavady taluk, covering north Wayanad: one at Payyampally, east of Mananthavady town, and one at Kallody, near St. Joseph's UP School on the Kuttiady road. The third is at Chennalode in Vythiri taluk, just north of Kalpetta, covering the centre and south of the district. All three keep coffins, mortuary freezer boxes, and a hearse van ready, so a call from almost anywhere in Wayanad can be answered within the hour, day or night.",
+      "We have three. Two are in Mananthavady taluk, covering north Wayanad: one at Payyampally, east of Mananthavady town, and one at Kallody, near St. Joseph's UP School on the Kuttiady road. The third is at Chennalode in Vythiri taluk, north-west of Kalpetta, towards Padinjarathara, covering the centre and south of the district. All three keep coffins, mortuary freezer boxes, and a hearse van ready, so a call from almost anywhere in Wayanad can be answered within the hour, day or night.",
   },
   {
     question: "Do you arrange Christian funeral services?",
