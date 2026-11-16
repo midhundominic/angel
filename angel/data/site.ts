@@ -31,6 +31,33 @@ export const siteConfig = {
   },
 } as const;
 
+export type Location = {
+  id: string;
+  name: string;
+  label: string;
+  region: string;
+  description: string;
+  streetAddress: string;
+  locality: string;
+  taluk: string;
+  district: string;
+  addressRegion: string;
+  postalCode: string;
+  country: string;
+  countryName: string;
+  geo: { latitude: number; longitude: number };
+  mapUrl: string;
+};
+
+/** Embeddable map of the shop's pin. No API key needed. */
+export const mapEmbedUrl = (location: Location) =>
+  `https://maps.google.com/maps?q=${location.geo.latitude},${location.geo.longitude}&z=16&hl=en&output=embed`;
+
+/** Opens Google Maps with turn-by-turn directions to the shop. */
+export const directionsUrl = (location: Location) =>
+  location.mapUrl ||
+  `https://www.google.com/maps/dir/?api=1&destination=${location.geo.latitude},${location.geo.longitude}`;
+
 /**
  * The two shops. They sit in different taluks — Payyampally in Mananthavady
  * (north Wayanad) and Chennalode in Vythiri (near Kalpetta, about 22km south) —
@@ -43,7 +70,7 @@ export const siteConfig = {
  * TODO(owner): replace each `streetAddress` with the exact address printed on
  * that shop's signboard, then make the Business Profiles match.
  */
-export const locations = [
+export const locations: Location[] = [
   {
     id: "payyampally",
     name: "Heaven Funeral Services — Payyampally",
@@ -60,6 +87,9 @@ export const locations = [
     country: "IN",
     countryName: "India",
     geo: { latitude: 11.810803, longitude: 76.0536769 },
+    // TODO(owner): paste this shop's Google Business Profile link (Maps → the
+    // shop → Share → Copy link). Until then, directions use the coordinates.
+    mapUrl: "",
   },
   {
     id: "chennalode",
@@ -77,8 +107,11 @@ export const locations = [
     country: "IN",
     countryName: "India",
     geo: { latitude: 11.63045, longitude: 76.0867 },
+    // TODO(owner): paste this shop's Google Business Profile link (Maps → the
+    // shop → Share → Copy link). Until then, directions use the coordinates.
+    mapUrl: "",
   },
-] as const;
+];
 
 /** Used wherever a single address is needed (metadata, legacy geo tags). */
 export const primaryLocation = locations[0];

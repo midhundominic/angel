@@ -8,6 +8,7 @@ import { Gallery } from "@/components/sections/Gallery";
 import { Hero } from "@/components/sections/Hero";
 import { ServiceAreas } from "@/components/sections/ServiceAreas";
 import { Services } from "@/components/sections/Services";
+import { ShopLocations } from "@/components/sections/ShopLocations";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { TransportJourney } from "@/components/sections/TransportJourney";
 
@@ -29,6 +30,7 @@ export default function Home() {
         {/* <Faq /> */}
         <Testimonials />
         <Contact />
+        <ShopLocations />
       </main>
       <Footer />
     </>
