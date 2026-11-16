@@ -5,6 +5,7 @@ import { Contact } from "@/components/sections/Contact";
 import { Gallery } from "@/components/sections/Gallery";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
+import { ShopLocations } from "@/components/sections/ShopLocations";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { TransportJourney } from "@/components/sections/TransportJourney";
 
@@ -23,6 +24,7 @@ export default function Home() {
         <Gallery />
         <Testimonials />
         <Contact />
+        <ShopLocations />
       </main>
       <Footer />
     </>
