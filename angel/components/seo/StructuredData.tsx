@@ -130,6 +130,9 @@ function branchNode(location: (typeof locations)[number]) {
       latitude: location.geo.latitude,
       longitude: location.geo.longitude,
     },
+    // Ties this branch to its Google Business Profile. Omitted until the
+    // shop's Maps link is filled in (data/site.ts → mapUrl).
+    ...(location.mapUrl ? { hasMap: location.mapUrl } : {}),
     // A radius as well as named places: covers "near me" queries from villages
     // we have not listed by name.
     serviceArea: {

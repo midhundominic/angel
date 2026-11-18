@@ -89,9 +89,8 @@ export const locations: Location[] = [
     country: "IN",
     countryName: "India",
     geo: { latitude: 11.810803, longitude: 76.0536769 },
-    // TODO(owner): paste this shop's Google Business Profile link (Maps → the
-    // shop → Share → Copy link). Until then, directions use the coordinates.
-    mapUrl: "",
+    // This shop's Google Business Profile (Maps → the shop → Share → Copy link).
+    mapUrl: "https://maps.app.goo.gl/zAdmzH78KzU3p429A",
   },
   {
     id: "kallody",
@@ -110,9 +109,8 @@ export const locations: Location[] = [
     country: "IN",
     countryName: "India",
     geo: { latitude: 11.766114, longitude: 75.962631 },
-    // TODO(owner): paste this shop's Google Business Profile link once
-    // verification is approved. Until then, directions use the coordinates.
-    mapUrl: "",
+    // This shop's Google Business Profile (Maps → the shop → Share → Copy link).
+    mapUrl: "https://maps.app.goo.gl/Nwu1KwUC9sJvKRSC7",
   },
   {
     id: "chennalode",
@@ -126,7 +124,7 @@ export const locations: Location[] = [
     taluk: "Vythiri",
     district: "Wayanad",
     addressRegion: "Kerala",
-    postalCode: "673121",
+    postalCode: "673122",
     country: "IN",
     countryName: "India",
     geo: { latitude: 11.654529, longitude: 75.995638 },
