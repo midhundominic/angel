@@ -88,7 +88,7 @@ export const locations: Location[] = [
     postalCode: "670646",
     country: "IN",
     countryName: "India",
-    geo: { latitude: 11.810803, longitude: 76.0536769 },
+    geo: { latitude: 11.805207, longitude: 76.051093 },
     // This shop's Google Business Profile (Maps → the shop → Share → Copy link).
     mapUrl: "https://maps.app.goo.gl/zAdmzH78KzU3p429A",
   },
@@ -108,7 +108,7 @@ export const locations: Location[] = [
     postalCode: "670645",
     country: "IN",
     countryName: "India",
-    geo: { latitude: 11.766114, longitude: 75.962631 },
+    geo: { latitude: 11.766055, longitude: 75.962207 },
     // This shop's Google Business Profile (Maps → the shop → Share → Copy link).
     mapUrl: "https://maps.app.goo.gl/Nwu1KwUC9sJvKRSC7",
   },

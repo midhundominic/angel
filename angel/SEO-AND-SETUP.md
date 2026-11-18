@@ -155,8 +155,8 @@ only show a location in the Maps pack for searches near its own pin.
 |---|---|---|
 | Name | Heaven Funeral Services | Heaven Funeral Services |
 | Locality | Payyampally, Mananthavady taluk | Chennalode, Vythiri taluk |
-| Pincode | 670646 | 673121 |
-| Pin | 11.810803, 76.0536769 | 11.63045, 76.0867 |
+| Pincode | 670646 | 673122 |
+| Pin | 11.805207, 76.051093 | 11.654529, 75.995638 |
 
 For each one, at <https://business.google.com>:
 
@@ -194,8 +194,8 @@ Two `TODO(owner)` markers are in `data/site.ts`:
   data, which is how Google connects the website to the business as one entity.
   Once both Business Profiles exist, add each shop's Maps link too.
 
-The coordinates you supplied are in place (Payyampally `11.810803, 76.0536769`;
-Chennalode `11.63045, 76.0867`). Confirm each against its Business Profile pin
+The coordinates you supplied are in place (Payyampally `11.805207, 76.051093`;
+Chennalode `11.654529, 75.995638`; Kallody `11.766055, 75.962207`). Confirm each against its Business Profile pin
 once the profiles are live, so the schema and the profile agree.
 
 ### 2.5 Local directories
